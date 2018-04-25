@@ -33,10 +33,13 @@ Object* OrcComponent::update( float dt)
 	/*
 	Orc should walk left and right for its update, changing direction when it hits a block or the edge of the screen
 	*/
-
+	if (wallWait > 0)
+	{
+		wallWait--;
+	}
 
 	GAME_VEC velocity = pDevice->getLinearVelocity(owner);
-	GAME_INT forceMultiplier = 1500;
+	GAME_INT forceMultiplier = 8;
 	GAME_VEC appliedForce;
 
 	switch (bodyComponent->getState()) //Before we change the position (i.e. before the orc moves), check if he's hit a wall
@@ -48,7 +51,10 @@ Object* OrcComponent::update( float dt)
 			pDevice->setAngle(owner, RIGHT);
 			bodyComponent->setState(RIGHT); //change the state to RIGHT so the orc turns around
 			spriteComponent->setAnimNumber(0);
+			wallHit = false;
 		}
+
+
 		break;
 	case RIGHT: //if the orc is moving to the right, we need to check collission with the right end of the screen
 		if (wallHit) //If the orc is at or past the right edge of the screen
@@ -56,15 +62,21 @@ Object* OrcComponent::update( float dt)
 			pDevice->setAngle(owner, LEFT);
 			bodyComponent->setState(LEFT); //change the state to LEFT so the orc turns around
 			spriteComponent->setAnimNumber(0);
+			wallHit = false;
 		}
 		break;
 	}
 
-	appliedForce.y = (float)sinf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
-	appliedForce.x = (float)cosf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
+	appliedForce.y = 0;
+	appliedForce.x = (float)cosf(((bodyComponent->getState())*PI / 180) - (PI / 2))*forceMultiplier;
 	pDevice->setLinearVelocity(owner, appliedForce);
 
 	return(NULL);
+}
+
+void OrcComponent::setLinearVelocity(GAME_VEC appliedForce)
+{
+	pDevice->setLinearVelocity(owner, appliedForce);
 }
 
 void OrcComponent::finish()

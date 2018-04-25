@@ -26,7 +26,7 @@ typedef struct GAME_VEC
 //========================================
 //Base Game Constants
 //========================================
-const GAME_INT SCREEN_WIDTH = 800;
+const GAME_INT SCREEN_WIDTH = 588;
 const GAME_INT SCREEN_HEIGHT = 600;
 const GAME_INT GAME_FPS = 100;
 const GAME_FLT dt = 1/GAME_FPS;

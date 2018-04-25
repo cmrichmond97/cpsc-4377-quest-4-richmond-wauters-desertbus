@@ -66,8 +66,8 @@ Object* BanditComponent::update(float dt)
 	}
 	else steps++;
 
-	appliedForce.y = (float)sinf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
-	appliedForce.x = (float)cosf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
+	appliedForce.y = (float)sinf((bodyComponent->getState()*PI / 180) - (PI / 2))*forceMultiplier;
+	appliedForce.x = (float)cosf((bodyComponent->getState()*PI / 180) - (PI / 2))*forceMultiplier;
 	pDevice->setLinearVelocity(owner, appliedForce);
 
 

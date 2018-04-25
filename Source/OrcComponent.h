@@ -10,7 +10,8 @@ public:
 	~OrcComponent();
 	bool initialize(GAME_OBJECTFACTORY_INITIALIZERS inits);
 	Object* update(float dt);
-	void setWallHit(bool wasHit) { wallHit = wasHit; }
+	void setWallHit(bool wasHit) { if (wallWait == 0) { wallHit = wasHit; wallWait = 5; } }
+	void setLinearVelocity(GAME_VEC appliedForce);
 	void finish();
 private:
 
@@ -19,5 +20,7 @@ private:
 	PhysicsDevice* pDevice;
 	int orcHeight;
 	int orcWidth;
-	bool wallHit;
+	bool wallHit = false;
+	int wallWait = 0;
+	
 };

@@ -2,6 +2,7 @@
 #include "definitions.h"
 #include "ContactListener.h"
 #include "Object.h"
+#include "BodyComponent.h"
 #include "InputComponent.h"
 #include "InventoryComponent.h"
 #include "KeyComponent.h"
@@ -111,6 +112,22 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 		//	break;
 	}
 	
+}
+
+void ContactListener::PostSolve(b2Contact * contact, const b2ContactImpulse * impulse)
+{
+	b2Body* bodyB = contact->GetFixtureB()->GetBody();
+	Object* objectB = static_cast<Object*>(bodyB->GetUserData());
+
+	GAME_INT forceMultiplier = 1500;
+	GAME_VEC appliedForce;
+	if (objectB->getType() == ORC)
+	{
+		appliedForce.y = 0;
+		appliedForce.x = (float)cosf(((objectB->getComponent<BodyComponent>()->getState())*PI / 180) - (PI / 2))*forceMultiplier;
+		objectB->getComponent<OrcComponent>()->setLinearVelocity(appliedForce);
+	}
+
 }
 
 void ContactListener::pickUpKey(Object* player, Object* item)

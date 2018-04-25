@@ -59,3 +59,8 @@ void BodyComponent::finish()
 	pDevice->removeObject(owner);
 }
 
+void BodyComponent::setStopPhysics()
+{
+	pDevice->setStopPhysics(owner);
+}
+

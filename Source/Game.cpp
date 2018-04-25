@@ -39,6 +39,10 @@ bool Game::Initialize(std::string objectConfig)
 {
 	level = 1;
 
+	blackboard = new Blackboard;//create the blackboard
+
+	inits.blackboard = blackboard;//add the blackboard to the initializers
+
 	gDevice = new GraphicsDevice(SCREEN_WIDTH, SCREEN_HEIGHT);//create the graphics device
 	if (!gDevice->Initialize(true))
 	{
@@ -72,12 +76,10 @@ bool Game::Initialize(std::string objectConfig)
 	}
 	inits.pDevice = pDevice;//add the Physics device to the initializers
 
-	blackboard = new Blackboard;//create the blackboard
-
-	inits.blackboard = blackboard;//add the blackboard to the initializers
+	
 
 	view = new View;// create the view
-	if (!view->initialize(iDevice, 0, 0))
+	if (!view->initialize(iDevice, 0, 0, blackboard))
 	{
 		printf("View could not initialize!");
 		exit(1);
@@ -231,21 +233,40 @@ bool Game::Run()
 bool Game::Update()
 {
 	bool gameOver = false;
+	bool levelCleared = false;
 
 	for (int i = 0; i<objects.size(); i++)
 	{
-		Object* newObject = objects[i]->update(dt);
-		if (objects[i]->getType() == PLAYER)
+		if (objects[i] != nullptr)
 		{
-			gameOver = objects[i]->getIsDead();
 
+
+			Object* newObject = objects[i]->update(dt);
+			if (objects[i]->getType() == PLAYER)
+			{
+				gameOver = objects[i]->getIsDead();
+
+			}
+			if (objects[i]->getType() == BIG_DOOR)
+			{
+				if (objects[i]->getLevelClear())
+				{
+					if (level == 1)
+					{
+						LoadLevel("./Assets/Config/level2.xml");
+						level = 2;
+					}
+					else
+					{
+						gameOver = true;
+					}
+				}
+			}
+			if (newObject)
+			{
+				objects.push_back(newObject);
+			}
 		}
-		if (objects[i]->getType() == BIG_DOOR)
-
-		if (newObject)
-		{
-			objects.push_back(newObject);
-		};
 	}
 	view->update(level);
 	iDevice->update();

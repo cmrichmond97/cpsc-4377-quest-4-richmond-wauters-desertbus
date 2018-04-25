@@ -5,8 +5,11 @@
 #include "BanditComponent.h"
 #include "BlockComponent.h"
 #include "BodyComponent.h"
+#include "ChestComponent.h"
+#include "DoorComponent.h"
 #include "InputComponent.h"
 #include "InventoryComponent.h"
+#include "KeyComponent.h"
 #include "OrcComponent.h"
 #include "SpriteComponent.h"
 
@@ -59,23 +62,31 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				animElement->QueryIntAttribute("name", &sequence); //grab the name for the sequence
 				switch (sequence)
 				{
-				case 0:
+				case -1:
 					animState = NA;
 					break;
-				case 1:
+				case 0:
 					animState = UP;
 					break;
 
-				case 2:
+				case 180:
 					animState = DOWN;
 					break;
 
-				case 3:
+				case 270:
 					animState = LEFT;
 					break;
 
-				case 4:
+				case 90:
 					animState = RIGHT;
+					break;
+
+				case 1:
+					animState = CLOSED;
+					break;
+
+				case 2:
+					animState = OPEN;
 					break;
 				}
 				TiXmlElement* spriteElement = animElement->FirstChildElement("Sprite");
@@ -161,13 +172,17 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				{
 					components.push_back(BLOCK_COMPONENT);
 				}
-				if (component == "Orc")
-				{
-					components.push_back(ORC_COMPONENT);
-				}
 				if (component == "Body")
 				{
 					components.push_back(BODY_COMPONENT);
+				}
+				if (component == "Chest")
+				{
+					components.push_back(CHEST_COMPONENT);
+				}
+				if (component == "Door")
+				{
+					components.push_back(DOOR_COMPONENT);
 				}
 				if (component == "Input")
 				{
@@ -177,10 +192,19 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				{
 					components.push_back(INVENTORY_COMPONENT);
 				}
+				if (component == "Key")
+				{
+					components.push_back(KEY_COMPONENT);
+				}
+				if (component == "Orc")
+				{
+					components.push_back(ORC_COMPONENT);
+				}
 				if (component == "Sprite")
 				{
 					components.push_back(SPRITE_COMPONENT);
 				}
+
 				compElement = compElement->NextSiblingElement("component");
 			}
 			componentLists[objectTypeEnum] = components;
@@ -223,11 +247,20 @@ std::vector<Component*> AssetLibrary::getComponentList(OBJECT_TYPE type)
 		case BODY_COMPONENT:
 			componentPtrList.push_back(new BodyComponent);
 			break;
+		case CHEST_COMPONENT:
+			componentPtrList.push_back(new ChestComponent);
+			break;
+		case DOOR_COMPONENT:
+			componentPtrList.push_back(new DoorComponent);
+			break;
 		case INPUT_COMPONENT:
 			componentPtrList.push_back(new InputComponent);
 			break;
 		case INVENTORY_COMPONENT:
 			componentPtrList.push_back(new InventoryComponent);
+			break;
+		case KEY_COMPONENT:
+			componentPtrList.push_back(new KeyComponent);
 			break;
 		case ORC_COMPONENT:
 			componentPtrList.push_back(new OrcComponent);

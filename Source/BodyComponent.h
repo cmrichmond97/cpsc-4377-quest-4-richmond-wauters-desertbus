@@ -18,8 +18,9 @@ public:
 	void start();
 	Object* update(float dt);
 	void finish();
+	void setStopPhysics();
 private:
-	ANIM_STATE state;
+	ANIM_STATE state = NA;
 
 	GAME_VEC position;
 	PhysicsDevice* pDevice;

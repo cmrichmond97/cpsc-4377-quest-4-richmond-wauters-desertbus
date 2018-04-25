@@ -8,6 +8,8 @@ class KeyComponent :
 public:
 	KeyComponent();
 	~KeyComponent();
+	bool initialize(GAME_OBJECTFACTORY_INITIALIZERS inits);
+	Object* update(float dt);
 	KEY_TYPE getKeyType() { return (keyType); };
 	void finish();
 private:

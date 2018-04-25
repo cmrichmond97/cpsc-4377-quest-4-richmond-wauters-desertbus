@@ -33,10 +33,11 @@ Object * DoorComponent::update(float dt)
 	Object* player = owner->getBlackboard()->getPlayer();
 	InventoryComponent* invComp = player->getComponent<InventoryComponent>();
 
-	if (invComp->getHasLoot[COUCH] && invComp->getHasLoot[BED] && invComp->getHasLoot[TABLE])
+	if (invComp->getHasLoot(COUCH) && invComp->getHasLoot(BED) && invComp->getHasLoot(TABLE))
 	{
 		this->setOpened(true);
 	}
+	return nullptr;
 }
 
 void DoorComponent::setOpened(bool open)

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest.3.Assignment", "Quest.1.Assignment.vcxproj", "{DED01E1F-E86B-45A6-99DF-0B794EB7F4EC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest.3.Assignment", "Quest.3.Assignment.vcxproj", "{DED01E1F-E86B-45A6-99DF-0B794EB7F4EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B448EF74-C4E1-4B08-9C32-73C772FFE34C}
+		SolutionGuid = {BBD8392A-9F7D-42FC-BCA3-DD54FD1F97BD}
 	EndGlobalSection
 EndGlobal
