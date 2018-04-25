@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Level>
+
+  <!-- Draw the edges of the screen -->
+
+  <Block name="Block" xStart="0" yStart="0" xEnd="560" yEnd="0"></Block>
+  <Block name="Block" xStart="0" yStart="392" xEnd="560" yEnd="392"></Block>
+
+  <Block name="Block" xStart="0" yStart="0" xEnd="0" yEnd="392"></Block>
+  <Block name="Block" xStart="560" yStart="0" xEnd="560" yEnd="392"></Block>
+
+  <!--Draw other chunks-->
+
+  <Block name="Block" xStart="0" yStart="28" xEnd="56" yEnd="28"></Block>
+  <Block name="Block" xStart="168" yStart="28" xEnd="168" yEnd="112"></Block>
+  <Block name="Block" xStart="392" yStart="28" xEnd="392" yEnd="112"></Block>
+  <Block name="Block" xStart="112" yStart="28" xEnd="112" yEnd="28"></Block>
+  <Block name="Block" xStart="56" yStart="84" xEnd="112" yEnd="84"></Block>
+  <Block name="Block" xStart="56" yStart="112" xEnd="56" yEnd="112"></Block>
+  <Block name="Block" xStart="112" yStart="112" xEnd="168" yEnd="112"></Block>
+  <Block name="Block" xStart="56" yStart="168" xEnd="112" yEnd="168"></Block>
+  <Block name="Block" xStart="56" yStart="196" xEnd="168" yEnd="196"></Block>
+  <Block name="Block" xStart="168" yStart="168" xEnd="196" yEnd="168"></Block>
+  <Block name="Block" xStart="196" yStart="196" xEnd="196" yEnd="308"></Block>
+  <Block name="Block" xStart="28" yStart="252" xEnd="56" yEnd="252"></Block>
+  <Block name="Block" xStart="112" yStart="252" xEnd="140" yEnd="252"></Block>
+  <Block name="Block" xStart="28" yStart="280" xEnd="168" yEnd="280"></Block>
+  <Block name="Block" xStart="196" yStart="364" xEnd="196" yEnd="364"></Block>
+  <Block name="Block" xStart="224" yStart="140" xEnd="224" yEnd="140"></Block>
+  <Block name="Block" xStart="364" yStart="364" xEnd="364" yEnd="364"></Block>
+  <Block name="Block" xStart="364" yStart="364" xEnd="364" yEnd="364"></Block>
+  <Block name="Block" xStart="364" yStart="168" xEnd="364" yEnd="308"></Block>
+  <Block name="Block" xStart="420" yStart="280" xEnd="532" yEnd="280"></Block>
+  <Block name="Block" xStart="392" yStart="168" xEnd="392" yEnd="280"></Block>
+  <Block name="Block" xStart="336" yStart="140" xEnd="336" yEnd="140"></Block>
+
+
+
+
+
+
+  <Orc name="Orc" xPosition="28" yPosition="56" ></Orc>
+  <Orc name="Orc" xPosition="196" yPosition="56"></Orc>
+  <Orc name="Orc" xPosition="420" yPosition="56"></Orc>
+  <Orc name="Orc" xPosition="532" yPosition="84"></Orc>
+  <Orc name="Orc" xPosition="196" yPosition="140"></Orc>
+  <Orc name="Orc" xPosition="224" yPosition="168"></Orc>
+  <Orc name="Orc" xPosition="28" yPosition="224"></Orc>
+
+  <Bandit name="Bandit" xPosition="532" yPosition="140"></Bandit>
+  <Bandit name="Bandit" xPosition="336" yPosition="252"></Bandit>
+
+
+
+
+  <Key name="ShinyKey" xPosition="168" yPosition="252"></Key>
+  <Key name="JungleKey" xPosition="504" yPosition="336"></Key>
+  <Key name="IceKey" xPosition="476" yPosition="28"></Key>
+
+  <Chest name="ShinyChest" xPosition="140" yPosition="28"></Chest>
+  <Chest name="JungleChest" xPosition="28" yPosition="336"></Chest>
+  <Chest name="IceChest" xPosition="476" yPosition="196"></Chest>
+
+</Level>

@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Object>
+  <Player type="Player" identifier="0">
+    
+    <!--
+    NOTE: Generalized all of the animation elements.
+    -->  
+    
+    <Animations numSequences="5">
+      
+      <Sequence name="0" numberSprites="1" width="18" height="25">
+        <Sprite name="na1" spriteNumber="1" xPosition="0" yPosition="25"></Sprite>
+      </Sequence>
+      
+      <Sequence name="1" numberSprites="3" width="18" height="25">
+        <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+        <Sprite name="up2" spriteNumber="2" xPosition="18" yPosition="0"></Sprite>
+        <Sprite name="up3" spriteNumber="3" xPosition="36" yPosition="0"></Sprite>
+      <!--    <Sprite name="up4" spriteNumber="4" position="54"></Sprite>
+        <Sprite name="up5" spriteNumber="5" position="72"></Sprite>
+        <Sprite name="up6" spriteNumber="6" position="90"></Sprite>
+        <Sprite name="up7" spriteNumber="7" position="108"></Sprite>-->
+      </Sequence>
+
+      <Sequence name="2" numberSprites="3" width="18" height="25">
+        <Sprite name="down1" spriteNumber="1" xPosition="0" yPosition="25"></Sprite>
+        <Sprite name="down2" spriteNumber="2" xPosition="18" yPosition="25"></Sprite>
+        <Sprite name="down3" spriteNumber="3" xPosition="36" yPositoin="25"></Sprite>
+      <!--    <Sprite name="down4" spriteNumber="4" position="54"></Sprite>
+        <Sprite name="down5" spriteNumber="5" position="72"></Sprite>
+        <Sprite name="down6" spriteNumber="6" position="90"></Sprite>
+        <Sprite name="down7" spriteNumber="7" position="108"></Sprite>-->
+      </Sequence>
+
+      <Sequence name="3" numberSprites="3" width="18" height="25">
+        <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="50"></Sprite>
+        <Sprite name="left2" spriteNumber="2" xPosition="19" yPosition="50" ></Sprite>
+        <Sprite name="left3" spriteNumber="3" xPosition="38" yPosition="50"></Sprite>
+      </Sequence>
+
+      <Sequence name="4" numberSprites="3" width="18" height="25">
+        <Sprite name="right1" spriteNumber="1" xPosition="0" yPosition="75"></Sprite>
+        <Sprite name="right2" spriteNumber="2" xPosition="19" yPosition="75"></Sprite>
+        <Sprite name="right3" spriteNumber="3" xPosition="38" yPosition="75"></Sprite>
+      </Sequence>
+
+
+    </Animations>
+
+    <StartUp red="72" green="127" blue="128" alpha="255" path="./Assets/spritesheet.png"></StartUp>
+
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+      
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Input"></component>
+      <component name="Inventory"></component>
+    </Components>
+  
+  </Player>
+
+  <Orc type ="Orc" identifier="1">
+    
+    <Animations  numberSequences="5">
+      <!-- for orc sprites, the sheet has a single vertical column for the sprites in a sequence-->
+      <!-- increment through, using the same x (startX) but a new initial y position from each entry-->
+      <Sequence name="0" numberSprites="1" width="18" height="23">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+      
+      <Sequence name="1" numberSprites="1" width="18" height="23">
+        <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+      
+      <Sequence name="2" numberSprites="1" width="18" height="23">
+        <Sprite name="down1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+        
+      <Sequence name="3" numberSprites="16" width="18" height="23">
+         <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+         <Sprite name="left2" spriteNumber="2" xPosition="0" yPosition="28"></Sprite>
+         <Sprite name="left3" spriteNumber="3" xPosition="0" yPosition="56"></Sprite>
+         <Sprite name="left4" spriteNumber="4" xPosition="0" yPosition="84"></Sprite>
+         <Sprite name="left5" spriteNumber="5" xPosition="0" yPosition="112"></Sprite>
+         <Sprite name="left6" spriteNumber="6" xPosition="0" yPosition="140"></Sprite>
+        <!--<Sprite name="left7" spriteNumber="7" xPosition="0" yPosition="168"></Sprite>
+         <Sprite name="left8" spriteNumber="8" xPosition="0" yPosition="196"></Sprite>
+         <Sprite name="left9" spriteNumber="9" xPosition="0" yPosition="224"></Sprite>
+         <Sprite name="left10" spriteNumber="10" xPosition="0" yPosition="252"></Sprite>
+         <Sprite name="left11" spriteNumber="11" xPosition="0" yPosition="280"></Sprite>
+         <Sprite name="left12" spriteNumber="12" xPosition="0" yPosition="308"></Sprite>
+         <Sprite name="left13" spriteNumber="13" xPosition="0" yPosition="336"></Sprite>
+         <Sprite name="left14" spriteNumber="14" xPosition="0" yPosition="364"></Sprite>
+         <Sprite name="left15" spriteNumber="15" xPosition="0" yPosition="392"></Sprite>
+         <Sprite name="left16" spriteNumber="16" xPosition="" yPosition="420"></Sprite>-->
+      </Sequence>
+
+      <Sequence name="4" numberSprites="16" width="18" height="23">
+        <Sprite name="right1" spriteNumber="1" xPosition="18" yPosition="0"></Sprite>
+        <Sprite name="right2" spriteNumber="2" xPosition="18" yPosition="28"></Sprite>
+        <Sprite name="right3" spriteNumber="3" xPosition="18" yPosition="56"></Sprite>
+        <Sprite name="right4" spriteNumber="4" xPosition="18" yPosition="84"></Sprite>
+        <Sprite name="right5" spriteNumber="5" xPosition="18" yPosition="112"></Sprite>
+        <Sprite name="right6" spriteNumber="6" xPosition="18" yPosition="140"></Sprite>
+      <!--  <Sprite name="right7" spriteNumber="7" xPosition="18" yPosition="168"></Sprite>
+        <Sprite name="right8" spriteNumber="8" xPosition="18" yPosition="196"></Sprite>
+        <Sprite name="right9" spriteNumber="9" xPosition="18" yPosition="224"></Sprite>
+        <Sprite name="right10" spriteNumber="10" xPosition="18" yPosition="252"></Sprite>
+        <Sprite name="right11" spriteNumber="11" xPosition="18" yPosition="280"></Sprite>
+        <Sprite name="right12" spriteNumber="12" xPosition="18" yPosition="308"></Sprite>
+        <Sprite name="right13" spriteNumber="13" xPosition="18" yPosition="336"></Sprite>
+        <Sprite name="right14" spriteNumber="14" xPosition="18" yPosition="364"></Sprite>
+        <Sprite name="right15" spriteNumber="15" xPosition="18" yPosition="392"></Sprite>
+        <Sprite name="right16" spriteNumber="16" xPosition="18" yPosition="420"></Sprite>-->
+      </Sequence>
+
+    </Animations>
+
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/Orc.png"></StartUp>
+  
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+ 
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Orc"></component>
+    </Components>
+  
+  </Orc>
+  
+  <Block type="Block" identifier="3">
+    
+    <Animations numSequences="5">
+      
+        <Sequence name="0" numberSprites="1" width="28" height="28">
+           <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+        </Sequence>
+         
+        <Sequence name="1" numberSprites="1" width="28" height="28">
+          <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    
+      <Sequence name="2" numberSprites="1" width="28" height="28" >
+          <Sprite name="down1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    
+     <Sequence name="3" numberSprites="1" width="28" height="28" >
+          <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    
+        <Sequence name="4" numberSprites="1" width="28" height="28" >
+          <Sprite name="right1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+    </Sequence>
+   
+  </Animations>
+
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/block.png"></StartUp>
+  
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="28" width ="28"></Physics>
+  
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Block"></component>
+    </Components>
+  
+  </Block>
+
+ <Bandit type="Bandit" width="22" height="36" numberSequences="4" identifier="2">
+   
+   <Animations>
+   <Sequence name="0" numberSprites="1" width="24" height="36">
+     <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="36"></Sprite>
+   </Sequence>
+     
+  <Sequence name="1" numberSprites="8" width="24" height="36">
+     <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="36"></Sprite>
+     <Sprite name="up2" spriteNumber="2" xPosition="22" yPosition="36"></Sprite>
+     <Sprite name="up3" spriteNumber="3" xPosition="44" yPosition="36"></Sprite>
+  <!--<Sprite name="up4" spriteNumber="4" xPosition="66" yPosition="36"></Sprite>
+     <Sprite name="up5" spriteNumber="5" xPosition="88" yPosition="36"></Sprite>
+     <Sprite name="up6" spriteNumber="6" xPosition="110" yPosition="36"></Sprite>
+     <Sprite name="up7" spriteNumber="7" xPosition="132" yPosition="36"></Sprite>
+     <Sprite name="up8" spriteNumber="8" xPosition="155" yPosition="36"></Sprite>-->
+    
+   </Sequence>
+
+   <Sequence name="2" numberSprites="8" width="24" height="36">
+     <Sprite name="down1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+     <Sprite name="down2" spriteNumber="2" xPosition="22" yPosition="0"></Sprite>
+     <Sprite name="down3" spriteNumber="3" xPosition="44" yPosition="0"></Sprite>
+    <!-- <Sprite name="down4" spriteNumber="4" xPosition="66" yPosition="0"></Sprite>
+     <Sprite name="down5" spriteNumber="5" xPosition="88" yPosition="0"></Sprite>
+     <Sprite name="down6" spriteNumber="6" xPosition="110" yPosition="0"></Sprite>
+     <Sprite name="down7" spriteNumber="7" xPosition="132" yPosition="0"></Sprite>
+     <Sprite name="down8" spriteNumber="8" xPosition="155" yPosition="0"></Sprite>-->
+
+
+
+   </Sequence>
+
+
+
+   <Sequence name="3" numberSprites="8"  width="21" height="36">
+
+     <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="72"></Sprite>
+     <Sprite name="left2" spriteNumber="2" xPosition="22" yPosition="72"></Sprite>
+     <Sprite name="left3" spriteNumber="3" xPosition="44" yPosition="72"></Sprite>
+     <Sprite name="left4" spriteNumber="4" xPosition="66" yPosition="72"></Sprite>
+     <Sprite name="left5" spriteNumber="5" xPosition="88" yPosition="72"></Sprite>
+     <Sprite name="left6" spriteNumber="6" xPosition="110" yPosition="72"></Sprite>
+     <Sprite name="left7" spriteNumber="7" xPosition="132" yPosition="72"></Sprite>
+     <Sprite name="left8" spriteNumber="8" xPosition="155" yPosition="72"></Sprite>
+    
+   </Sequence>
+
+
+
+   <Sequence name="4" numberSprites="8" width="21" height="36">
+
+     <Sprite name="right1" spriteNumber="1" xPosition="0" yPosition="108"></Sprite>
+     <Sprite name="right2" spriteNumber="2" xPosition="22" yPosition="108"></Sprite>
+     <Sprite name="right3" spriteNumber="3" xPosition="44" yPosition="108"></Sprite>
+     <Sprite name="right4" spriteNumber="4" xPosition="66" yPosition="108"></Sprite>
+     <Sprite name="right5" spriteNumber="5" xPosition="88" yPosition="108"></Sprite>
+     <Sprite name="right6" spriteNumber="6" xPosition="110" yPosition="108"></Sprite>
+     <Sprite name="right7" spriteNumber="7" xPosition="132" yPosition="108"></Sprite>
+     <Sprite name="right8" spriteNumber="8" xPosition="155" yPosition="108"></Sprite>
+
+
+
+   </Sequence>
+  </Animations>
+
+   <StartUp red="207" green="167" blue="252" alpha="255" path="./Assets/bandit.png"></StartUp>
+
+   <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="37" width ="28"></Physics>
+
+   <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Bandit"></component>
+   </Components>
+  
+  </Bandit>
+
+  <JungleKey type="JungleKey" identifier="4">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/JungleKey.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="16" height="28">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+    
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Key"></component>
+    </Components>
+  </JungleKey>
+
+ <JungleChest type="JungleChest" identifier="5">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/JungleChest.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="1" numberSprites="1" width="24" height="24">
+        <Sprite name="closed" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+
+      <Sequence name="2" numberSprites="1" width="24" height="24">
+        <Sprite name="open" spriteNumber="1" xPosition="50" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Chest"></component>
+    </Components>  
+  </JungleChest>
+
+
+  <ShinyKey type="ShinyKey" identifier="6">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/ShinyKey.png"></StartUp>
+
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="16" height="28">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Key"></component>
+    </Components>
+  </ShinyKey>
+
+<ShinyChest type="ShinyChest" identifier="7">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/ShinyChest.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="2" numberSprites="1" width="24" height="24">
+        <Sprite name="closed1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+
+      <Sequence name="1" numberSprites="1" width="24" height="24">
+        <Sprite name="open1" spriteNumber="1" xPosition="50" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Chest"></component>
+    </Components>
+  </ShinyChest>
+
+
+  <RuinsKey type="RuinsKey" identifier="8">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/RuinsKey.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="32" height="20">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Key"></component>
+    </Components>
+  </RuinsKey>
+
+  <RuinsChest type="RuinsChest" identifier="9">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/RuinsChest.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="24" height="24">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Chest"></component>
+    </Components>
+  </RuinsChest>
+
+  <IceKey type="IceKey" identifier="10">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/IceKey.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="18" height="28">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+  
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Key"></component>
+    </Components>
+  </IceKey>
+
+  <IceChest type="IceChest" identifier="11">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/IceChest.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="2" numberSprites="1" width="24" height="24">
+        <Sprite name="closed1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+
+      <Sequence name="1" numberSprites="1" width="24" height="24">
+        <Sprite name="open1" spriteNumber="1" xPosition="51" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Chest"></component>
+    </Components>
+  </IceChest>
+
+
+  <BigDoor type="BigDoor" identifier="12">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/BigDoor.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="0" numberSprites="1" width="22" height="34">
+        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+    </Animations>
+    
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Door"></component>
+    </Components>
+  </BigDoor>
+
+
+
+</Object>

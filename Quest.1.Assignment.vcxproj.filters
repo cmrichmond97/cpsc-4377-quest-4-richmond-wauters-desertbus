@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AssetLibrary.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjectFactory.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GraphicsDevice.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputDevice.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Texture.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\View.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinystr.cpp">
+      <Filter>Source Files\Third Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxml.cpp">
+      <Filter>Source Files\Third Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files\Third Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxmlparser.cpp">
+      <Filter>Source Files\Third Party</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ContactListener.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InventoryComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BanditComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlockComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BodyComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrcComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\KeyComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ChestComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PhysicsDevice.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DoorComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Box2DDebugDraw.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Blackboard.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\AssetLibrary.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameObjectFactory.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GraphicsDevice.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InputDevice.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Texture.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Timer.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\View.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinyxml\tinyxml.h">
+      <Filter>Header Files\Third Party</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinyxml\tinystr.h">
+      <Filter>Header Files\Third Party</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BodyComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InputComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ContactListener.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InventoryComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BanditComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlockComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\ChestComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\KeyComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OrcComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PhysicsDevice.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DoorComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Box2DDebugDraw.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Blackboard.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\Config\level.xml">
+      <Filter>Resource Files\Xml</Filter>
+    </Xml>
+    <Xml Include="Assets\Config\objects.xml">
+      <Filter>Resource Files\Xml</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e4402ced-dda7-43da-93b8-f40c53c7a6b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{30251658-0151-43d6-9ba9-4e71bd5ba443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{cff6c57c-9a1e-4421-b17d-158adb282c5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Devices and Libraries">
+      <UniqueIdentifier>{51097b7f-2178-4a96-b75a-fa6ca32b55c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Third Party">
+      <UniqueIdentifier>{b99bdfd3-8f87-4baa-a7d2-cff512e14dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{51086c89-d38c-4212-9987-3eb167b37092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{fd5d653a-38f0-4775-b18e-2f147aca9e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Devices and Libraries">
+      <UniqueIdentifier>{537f3afb-53f7-44cc-9f8f-05093592cca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Third Party">
+      <UniqueIdentifier>{e68c4c91-8f4b-4b19-9dbf-0cbba06030cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Xml">
+      <UniqueIdentifier>{d6fbfeec-9e78-4f9a-a996-7b41f2057e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Spritesheets">
+      <UniqueIdentifier>{13e1b2f4-8dfc-411f-a9b9-34f29df56553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components\Behavior Components">
+      <UniqueIdentifier>{f645aede-882b-46db-9f77-89be8d2b8512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components\Behavior Components">
+      <UniqueIdentifier>{29d83742-757d-4e4a-847e-004d9063cb02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\bandit.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\BigDoor.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\block.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\IceChest.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\IceKey.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\JungleChest.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\JungleKey.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\Mimic.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\Orc.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\RuinsChest_Sheet.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\RuinsKey.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\ShinyChest.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\ShinyKey.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\spritesheet.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

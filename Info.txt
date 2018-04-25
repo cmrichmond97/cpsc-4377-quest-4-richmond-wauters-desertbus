@@ -1,0 +1,7 @@
+This file is not intended to be used as an active component of any code. This is instead to be used to store useful information that is to
+be included in code at some later point.
+
+PLAYER SPRITE INFO
+
+Sprite width = 14 pixels
+Sprite height = 23 pixels

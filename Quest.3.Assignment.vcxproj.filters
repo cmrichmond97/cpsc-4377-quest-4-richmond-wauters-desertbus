@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Devices &amp; Libraries">
+      <UniqueIdentifier>{66772776-d661-41e7-adc2-e6575132cff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Devices &amp; Libraries">
+      <UniqueIdentifier>{e64746cd-312d-405d-ad57-5c8c1423bc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Devices &amp; Libraries\xml">
+      <UniqueIdentifier>{2750c17f-1dee-4775-b363-0cd6b51b5302}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Devices &amp; Libraries\xml">
+      <UniqueIdentifier>{b11e6767-2546-4d57-b976-b40afc80eebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{eb5d5bc5-6cd8-46d3-9833-b39f4434a2d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components\Behavior Components">
+      <UniqueIdentifier>{502189f8-905a-448a-918c-eb438caef435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{fc3ed8a6-b1fa-4118-bf76-92de58098f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components\Behavior Components">
+      <UniqueIdentifier>{a87b1f08-8da7-4073-a08f-7a0dbb88e9fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinystr.cpp">
+      <Filter>Source Files\Devices &amp; Libraries\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxml.cpp">
+      <Filter>Source Files\Devices &amp; Libraries\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxmlerror.cpp">
+      <Filter>Source Files\Devices &amp; Libraries\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml\tinyxmlparser.cpp">
+      <Filter>Source Files\Devices &amp; Libraries\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameObjectFactory.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GraphicsDevice.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputDevice.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Texture.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\View.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BodyComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Component.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpriteComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BanditComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\BlockComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\OrcComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AssetLibrary.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PhysicsDevice.cpp">
+      <Filter>Source Files\Devices &amp; Libraries</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\tinyxml\tinystr.h">
+      <Filter>Header Files\Devices &amp; Libraries\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinyxml\tinyxml.h">
+      <Filter>Header Files\Devices &amp; Libraries\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Definitions.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GameObjectFactory.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\GraphicsDevice.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InputDevice.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Object.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Texture.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Timer.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\View.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BodyComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Component.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SpriteComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\InputComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BanditComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\BlockComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\OrcComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AssetLibrary.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\PhysicsDevice.h">
+      <Filter>Header Files\Devices &amp; Libraries</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\block.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\spritesheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\bandit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\orc.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\Config\level.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="Assets\Config\objects.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
