@@ -16,5 +16,4 @@ public:
 
 protected:
 	Object* owner;
-
 };

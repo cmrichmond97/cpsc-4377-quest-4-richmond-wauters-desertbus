@@ -41,8 +41,7 @@
   <Player name="Player" xPosition="400" yPosition="300" ></Player>
 
 
-
- <!-- <Orc name="Orc" xPosition="140" yPosition="58" ></Orc>
+ <Orc name="Orc" xPosition="140" yPosition="58" ></Orc>
   <Orc name="Orc" xPosition="196" yPosition="58"></Orc>
   <Orc name="Orc" xPosition="420" yPosition="56"></Orc>
   <Orc name="Orc" xPosition="532" yPosition="84"></Orc>
@@ -51,7 +50,8 @@
   <Orc name="Orc" xPosition="28" yPosition="224"></Orc>
 
   <Bandit name="Bandit" xPosition="532" yPosition="140"></Bandit>
-  <Bandit name="Bandit" xPosition="336" yPosition="252"></Bandit>-->
+  <Bandit name="Bandit" xPosition="336" yPosition="252"></Bandit>
+ <!---->
 
 
 
@@ -60,7 +60,7 @@
   <Key name="JungleKey" keyType ="Jungle" xPosition="504" yPosition="336"></Key>
   <Key name="IceKey" keyType ="Ice" xPosition="476" yPosition="28"></Key>
 
-  <Chest name="ShinyChest" keyType ="Shiny" xPosition="140" yPosition="28"></Chest>
+  <Chest name="ShinyChest" keyType ="Shiny" xPosition="142" yPosition="30"></Chest>
   <Chest name="JungleChest" keyType ="Jungle" xPosition="28" yPosition="336"></Chest>
   <Chest name="IceChest" keyType ="Ice" xPosition="476" yPosition="196"></Chest>
 

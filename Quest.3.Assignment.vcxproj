@@ -28,9 +28,11 @@
     <ClCompile Include="Source\InputDevice.cpp" />
     <ClCompile Include="Source\InventoryComponent.cpp" />
     <ClCompile Include="Source\KeyComponent.cpp" />
+    <ClCompile Include="Source\Mimic.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\OrcComponent.cpp" />
     <ClCompile Include="Source\PhysicsDevice.cpp" />
+    <ClCompile Include="Source\SoundDevice.cpp" />
     <ClCompile Include="Source\Source.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
     <ClCompile Include="Source\Texture.cpp" />
@@ -60,9 +62,11 @@
     <ClInclude Include="Source\InputDevice.h" />
     <ClInclude Include="Source\InventoryComponent.h" />
     <ClInclude Include="Source\KeyComponent.h" />
+    <ClInclude Include="Source\Mimic.h" />
     <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\OrcComponent.h" />
     <ClInclude Include="Source\PhysicsDevice.h" />
+    <ClInclude Include="Source\SoundDevice.h" />
     <ClInclude Include="Source\SpriteComponent.h" />
     <ClInclude Include="Source\Texture.h" />
     <ClInclude Include="Source\Timer.h" />

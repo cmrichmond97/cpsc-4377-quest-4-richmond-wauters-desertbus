@@ -88,6 +88,12 @@
     <ClCompile Include="Source\Blackboard.cpp">
       <Filter>Source Files\Devices and Libraries</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Mimic.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SoundDevice.cpp">
+      <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\AssetLibrary.h">
@@ -169,6 +175,12 @@
       <Filter>Header Files\Devices and Libraries</Filter>
     </ClInclude>
     <ClInclude Include="Source\Blackboard.h">
+      <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Mimic.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SoundDevice.h">
       <Filter>Header Files\Devices and Libraries</Filter>
     </ClInclude>
   </ItemGroup>

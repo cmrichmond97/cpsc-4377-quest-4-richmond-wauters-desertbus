@@ -16,6 +16,11 @@ bool InventoryComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 {
 	owner = inits.owner;
 	return(true);
+	keys[JUNGLE] = false;
+	keys[SHINY] = false;
+	keys[RUINS] = false;
+	keys[ICE] = false;
+
 }
 
 Object * InventoryComponent::update(float dt)
@@ -27,7 +32,7 @@ bool InventoryComponent::addKey(Object * item)
 {
 
 	keys[item->getComponent<KeyComponent>()->getKeyType()] = true;
-//	item->finish();
+	item->finish();
 	
 	return (true);
 }

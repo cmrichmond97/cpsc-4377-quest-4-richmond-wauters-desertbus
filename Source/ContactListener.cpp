@@ -145,9 +145,9 @@ void ContactListener::openChest(Object* player, Object* chest)
 	InventoryComponent* invComp = player->getComponent<InventoryComponent>();
 
 	KEY_TYPE chestType = chestComp->getChestType();
+	bool hasKey = invComp->getHasKey(chestType);
 
-
-	if (invComp->getHasKey(chestType));
+	if (hasKey)
 	{
 		if (!chestComp->getOpened())
 		{

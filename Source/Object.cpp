@@ -126,13 +126,12 @@ void Object::draw()
 
 bool Object::finish()
 {
-	this->getComponent<BodyComponent>()->setStopPhysics();
-	/*for (int i = 0; i < components.size(); i++)
+	for (int i = 0; i < components.size(); i++)
 	{
 		components[i]->finish();
 		delete components[i];
 	}
-	delete this;*/
+	delete this;
 	return(true);
 }
 
