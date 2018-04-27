@@ -40,7 +40,7 @@ Object* InputComponent::update(float dt)
 	Object* newObject = nullptr;
 
 	GAME_VEC velocity = pDevice->getLinearVelocity(owner);
-	GAME_INT forceMultiplier = 1000;
+	GAME_INT forceMultiplier = 10;
 	GAME_VEC appliedForce;
 
 	if (iDevice->getEvent(GAME_UP))//UP

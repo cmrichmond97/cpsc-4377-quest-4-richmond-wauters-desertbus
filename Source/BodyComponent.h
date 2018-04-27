@@ -13,6 +13,9 @@ public:
 	bool initialize(GAME_OBJECTFACTORY_INITIALIZERS inits);
 	GAME_VEC* getPositionPtr();
 	GAME_VEC getDimensions() { return dimensions; }
+	GAME_FLT getAngle();
+	void setAngle(GAME_FLT newAngle);
+	GAME_VEC getVelocity();
 	ANIM_STATE getState();
 	void setState(ANIM_STATE);
 	void start();

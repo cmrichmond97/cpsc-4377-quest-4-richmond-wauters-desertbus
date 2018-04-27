@@ -19,15 +19,59 @@ typedef float			GAME_FLT;
 typedef Uint32			GAME_INT;
 typedef struct GAME_VEC
 {
-	GAME_FLT x;
-	GAME_FLT y;
+	float x;
+	float y;
+	//friend ostream& operator<< (ostream& o, const GAME_VEC& src);
+	GAME_VEC& operator+= (const GAME_VEC & src1)
+	{
+		this->x = src1.x + this->x;
+		this->y = src1.y + this->y;
+		return *this;
+	}
+
+	friend GAME_VEC operator+ (const GAME_VEC & src1, const GAME_VEC & src2)
+	{
+		return GAME_VEC{ src1.x + src2.x, src1.y + src2.y };
+	}
+	friend GAME_VEC operator- (const GAME_VEC & src1, const GAME_VEC & src2)
+	{
+		return GAME_VEC{ src1.x - src2.x, src1.y - src2.y };
+	}
+	friend bool operator> (const GAME_VEC & src1, int src2)
+	{
+		if (src1.x > src2 && src1.y > src2)
+		{
+			return true;
+		}
+		return false;
+	}
+	friend bool operator< (const GAME_VEC & src1, int src2)
+	{
+		if (src1.x < src2 && src1.y < src2)
+		{
+			return true;
+		}
+		return false;
+	}
+	friend bool operator== (const GAME_VEC & src1, const GAME_VEC & src2)
+	{
+		if (src1.x == src2.x && src1.y == src2.y)
+		{
+			return true;
+		}
+		return false;
+	}
+	friend GAME_VEC abs(GAME_VEC & src)
+	{
+		return { abs(src.x),abs(src.y) };
+	}
 } GAME_VEC;
 
 //========================================
 //Base Game Constants
 //========================================
 const GAME_INT SCREEN_WIDTH = 588;
-const GAME_INT SCREEN_HEIGHT = 480;
+const GAME_INT SCREEN_HEIGHT = 420;
 const GAME_INT GAME_FPS = 100;
 const GAME_FLT dt = 1/GAME_FPS;
 

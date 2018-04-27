@@ -39,14 +39,16 @@ bool View::update(int level)
 		{
 			if (screenNo == 1)
 			{
-				position.y += SCREEN_HEIGHT;
+				position.y -= SCREEN_HEIGHT;
+				screenNo = 2;
 			}
 		}
-		if (blackboard->getPlayer()->getComponent<BodyComponent>()->getPositionPtr()->y < SCREEN_HEIGHT)
+		else if (blackboard->getPlayer()->getComponent<BodyComponent>()->getPositionPtr()->y < SCREEN_HEIGHT)
 		{
 			if (screenNo == 2)
 			{
-				position.y -= SCREEN_HEIGHT;
+				position.y += SCREEN_HEIGHT;
+				screenNo = 1;
 			}
 		}
 	}

@@ -28,7 +28,7 @@
     <ClCompile Include="Source\InputDevice.cpp" />
     <ClCompile Include="Source\InventoryComponent.cpp" />
     <ClCompile Include="Source\KeyComponent.cpp" />
-    <ClCompile Include="Source\Mimic.cpp" />
+    <ClCompile Include="Source\MimicComponent.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\OrcComponent.cpp" />
     <ClCompile Include="Source\PhysicsDevice.cpp" />
@@ -62,7 +62,7 @@
     <ClInclude Include="Source\InputDevice.h" />
     <ClInclude Include="Source\InventoryComponent.h" />
     <ClInclude Include="Source\KeyComponent.h" />
-    <ClInclude Include="Source\Mimic.h" />
+    <ClInclude Include="Source\MimicComponent.h" />
     <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\OrcComponent.h" />
     <ClInclude Include="Source\PhysicsDevice.h" />
@@ -78,6 +78,7 @@
     <Xml Include="Assets\Config\level.xml">
       <SubType>Designer</SubType>
     </Xml>
+    <Xml Include="Assets\Config\level2.xml" />
     <Xml Include="Assets\Config\objects.xml" />
   </ItemGroup>
   <ItemGroup>

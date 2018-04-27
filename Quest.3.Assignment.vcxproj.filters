@@ -88,11 +88,11 @@
     <ClCompile Include="Source\Blackboard.cpp">
       <Filter>Source Files\Devices and Libraries</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Mimic.cpp">
-      <Filter>Source Files\Components\Behavior Components</Filter>
-    </ClCompile>
     <ClCompile Include="Source\SoundDevice.cpp">
       <Filter>Source Files\Devices and Libraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MimicComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -177,11 +177,11 @@
     <ClInclude Include="Source\Blackboard.h">
       <Filter>Header Files\Devices and Libraries</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Mimic.h">
-      <Filter>Header Files\Components\Behavior Components</Filter>
-    </ClInclude>
     <ClInclude Include="Source\SoundDevice.h">
       <Filter>Header Files\Devices and Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MimicComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +189,9 @@
       <Filter>Resource Files\Xml</Filter>
     </Xml>
     <Xml Include="Assets\Config\objects.xml">
+      <Filter>Resource Files\Xml</Filter>
+    </Xml>
+    <Xml Include="Assets\Config\level2.xml">
       <Filter>Resource Files\Xml</Filter>
     </Xml>
   </ItemGroup>

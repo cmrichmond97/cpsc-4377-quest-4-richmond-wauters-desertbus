@@ -32,6 +32,21 @@ GAME_VEC* BodyComponent::getPositionPtr()
 	return(pDevice->getPosition(owner));
 }
 
+GAME_FLT BodyComponent::getAngle()
+{
+	return pDevice->getAngle(owner);
+}
+
+void BodyComponent::setAngle(GAME_FLT newAngle)
+{
+	pDevice->setAngle(owner, newAngle);
+}
+
+GAME_VEC BodyComponent::getVelocity()
+{
+	return(pDevice->getVelocity(owner));
+}
+
 ANIM_STATE BodyComponent::getState()
 {
 	return(state);
