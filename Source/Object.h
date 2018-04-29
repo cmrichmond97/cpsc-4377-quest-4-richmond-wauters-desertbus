@@ -24,13 +24,16 @@ public:
 	void addComponent(Component* component);
 	bool initialize(GAME_OBJECTFACTORY_INITIALIZERS inits);
 	Object* update(float dt);
-	bool getIsDead() { return isDead; };
-	bool getLevelClear() { return levelClear; };
 	Blackboard* getBlackboard() { return(blackboard); }
-	void kill();
+	void kill(){ isDead = true; }
 	void draw();
 	bool finish();
+
+	//getters
+	bool getIsDead() { return isDead; };
+	bool getLevelClear() { return levelClear; };
 	OBJECT_TYPE getType();
+
 
 	template<class T>
 	T* getComponent()

@@ -252,6 +252,11 @@ bool Game::Update()
 			{
 				objects.push_back(newObject);
 			}
+			if (objects[i]->getIsDead())
+			{
+				objects[i]->finish();
+				delete objects[i];
+			}
 		}
 	}
 	if (blackboard->getGameClear() == true)

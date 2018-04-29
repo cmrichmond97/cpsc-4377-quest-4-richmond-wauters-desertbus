@@ -32,8 +32,7 @@ bool InventoryComponent::addKey(Object * item)
 {
 
 	keys[item->getComponent<KeyComponent>()->getKeyType()] = true;
-	item->finish();
-	
+	item->kill;	
 	return (true);
 }
 
