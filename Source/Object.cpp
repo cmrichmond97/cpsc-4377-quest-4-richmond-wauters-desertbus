@@ -111,10 +111,7 @@ Object* Object::update(float dt)
 	}
 	return(newObject);
 }
-void Object::kill()
-{
-	isDead = true; 
-}
+
 void Object::draw()
 {
 	SpriteComponent* comp = getComponent<SpriteComponent>();
@@ -131,7 +128,6 @@ bool Object::finish()
 		components[i]->finish();
 		delete components[i];
 	}
-	delete this;
 	return(true);
 }
 

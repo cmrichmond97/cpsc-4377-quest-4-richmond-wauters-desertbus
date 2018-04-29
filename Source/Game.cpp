@@ -266,6 +266,11 @@ bool Game::Update()
 			{
 				objects.push_back(newObject);
 			}
+			if (objects[i]->getIsDead())
+			{
+				objects[i]->finish();
+				delete objects[i];
+			}
 		}
 	}
 	view->update(level);
