@@ -8,6 +8,7 @@
 #include "InputComponent.h"
 #include "InventoryComponent.h"
 #include "KeyComponent.h"
+#include "MimicComponent.h"
 #include "OrcComponent.h"
 #include "SpriteComponent.h"
 #include "Blackboard.h"
@@ -87,7 +88,9 @@ bool Object::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 		inits.keyType = ICE;
 		this->getComponent<ChestComponent>()->initialize(inits);
 		break;
-
+	case MIMIC:
+		this->getComponent<MimicComponent>()->initialize(inits);
+		break;
 	case BIG_DOOR:
 		this->getComponent<DoorComponent>()->initialize(inits);
 		break;
@@ -126,12 +129,12 @@ void Object::draw()
 
 bool Object::finish()
 {
-	for (int i = 0; i < components.size(); i++)
-	{
-		components[i]->finish();
-		delete components[i];
-	}
-	delete this;
+	//for (int i = 0; i < components.size(); i++)
+	//{
+	//	components[i]->finish();
+	//	delete components[i];
+	//}
+	//delete this;
 	return(true);
 }
 

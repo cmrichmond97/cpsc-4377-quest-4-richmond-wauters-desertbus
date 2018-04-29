@@ -4,7 +4,8 @@
 
   <!-- Draw the edges of the screen -->
 
-  <Block name="Block" xStart="0" yStart="0" xEnd="560" yEnd="0"></Block>
+<!--  <Block name="Block" xStart="0" yStart="0" xEnd="252" yEnd="0"></Block>
+  <Block name="Block" xStart="308" yStart="0" xEnd="560" yEnd="0"></Block>
   <Block name="Block" xStart="0" yStart="392" xEnd="560" yEnd="392"></Block>
 
   <Block name="Block" xStart="0" yStart="0" xEnd="0" yEnd="392"></Block>
@@ -12,7 +13,7 @@
 
 
   
-  <!--Draw other chunks-->
+  Draw other chunks
 
  <Block name="Block" xStart="0" yStart="28" xEnd="56" yEnd="28"></Block>
   <Block name="Block" xStart="168" yStart="28" xEnd="168" yEnd="112"></Block>
@@ -36,12 +37,14 @@
   <Block name="Block" xStart="420" yStart="280" xEnd="532" yEnd="280"></Block>
   <Block name="Block" xStart="392" yStart="168" xEnd="392" yEnd="280"></Block>
   <Block name="Block" xStart="336" yStart="140" xEnd="336" yEnd="140"></Block>
-
-
+  -->
   <Player name="Player" xPosition="400" yPosition="300" ></Player>
+ <Mimic name="Mimic" xPosition="400" yPosition="0"></Mimic>
 
 
- <Orc name="Orc" xPosition="140" yPosition="58" ></Orc>
+
+
+<!-- <Orc name="Orc" xPosition="140" yPosition="58" ></Orc>
   <Orc name="Orc" xPosition="196" yPosition="58"></Orc>
   <Orc name="Orc" xPosition="420" yPosition="56"></Orc>
   <Orc name="Orc" xPosition="532" yPosition="84"></Orc>
@@ -49,19 +52,19 @@
   <Orc name="Orc" xPosition="224" yPosition="168"></Orc>
   <Orc name="Orc" xPosition="28" yPosition="224"></Orc>
 
-  <Bandit name="Bandit" xPosition="532" yPosition="140"></Bandit>
-  <Bandit name="Bandit" xPosition="336" yPosition="252"></Bandit>
- <!---->
+  <Bandit name="Bandit" xPosition="532" yPosition="160"></Bandit>
+  <Bandit name="Bandit" xPosition="336" yPosition="280"></Bandit>
+ 
+
+  <BigDoor name="BigDoor" xPosition="280" yPosition="0"></BigDoor>
 
 
+  <Key name="ShinyKey" keyType ="Shiny" xPosition="176" yPosition="257"></Key>
+  <Key name="JungleKey" keyType ="Jungle" xPosition="512" yPosition="341"></Key>
+  <Key name="IceKey" keyType ="Ice" xPosition="484" yPosition="33"></Key>
 
-
-  <Key name="ShinyKey" keyType ="Shiny" xPosition="168" yPosition="252"></Key>
-  <Key name="JungleKey" keyType ="Jungle" xPosition="504" yPosition="336"></Key>
-  <Key name="IceKey" keyType ="Ice" xPosition="476" yPosition="28"></Key>
-
-  <Chest name="ShinyChest" keyType ="Shiny" xPosition="142" yPosition="30"></Chest>
-  <Chest name="JungleChest" keyType ="Jungle" xPosition="28" yPosition="336"></Chest>
-  <Chest name="IceChest" keyType ="Ice" xPosition="476" yPosition="196"></Chest>
-
+  <Chest name="ShinyChest" keyType ="Shiny" heldLoot ="Couch" xPosition="142" yPosition="30"></Chest>
+  <Chest name="JungleChest" keyType ="Jungle" heldLoot ="Bed" xPosition="28" yPosition="336"></Chest>
+  <Chest name="IceChest" keyType ="Ice" heldLoot ="Table" xPosition="476" yPosition="196"></Chest>
+-->
 </Level>

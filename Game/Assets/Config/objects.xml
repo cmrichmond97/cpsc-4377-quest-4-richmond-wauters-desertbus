@@ -134,7 +134,7 @@
 
   </Animations>
 
-    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/block.png"></StartUp>
+    <StartUp red="255" green="0" blue="0" alpha="255" path="./Assets/block.png"></StartUp>
   
     <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="28" width ="28"></Physics>
   
@@ -153,10 +153,10 @@
      <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="36"></Sprite>
    </Sequence>
      
-  <Sequence name="0" numberSprites="8" width="24" height="36">
-     <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="36"></Sprite>
-     <Sprite name="up2" spriteNumber="2" xPosition="22" yPosition="36"></Sprite>
-     <Sprite name="up3" spriteNumber="3" xPosition="44" yPosition="36"></Sprite>
+  <Sequence name="0" numberSprites="8" width="23" height="32">
+     <Sprite name="up1" spriteNumber="1" xPosition="0" yPosition="40"></Sprite>
+     <Sprite name="up2" spriteNumber="2" xPosition="24" yPosition="40"></Sprite>
+     <Sprite name="up3" spriteNumber="3" xPosition="48" yPosition="40"></Sprite>
   <!--<Sprite name="up4" spriteNumber="4" xPosition="66" yPosition="36"></Sprite>
      <Sprite name="up5" spriteNumber="5" xPosition="88" yPosition="36"></Sprite>
      <Sprite name="up6" spriteNumber="6" xPosition="110" yPosition="36"></Sprite>
@@ -165,10 +165,10 @@
     
    </Sequence>
 
-   <Sequence name="180" numberSprites="8" width="24" height="36">
+   <Sequence name="180" numberSprites="8" width="23" height="35">
      <Sprite name="down1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
-     <Sprite name="down2" spriteNumber="2" xPosition="22" yPosition="0"></Sprite>
-     <Sprite name="down3" spriteNumber="3" xPosition="44" yPosition="0"></Sprite>
+     <Sprite name="down2" spriteNumber="2" xPosition="24" yPosition="0"></Sprite>
+     <Sprite name="down3" spriteNumber="3" xPosition="48" yPosition="0"></Sprite>
     <!-- <Sprite name="down4" spriteNumber="4" xPosition="66" yPosition="0"></Sprite>
      <Sprite name="down5" spriteNumber="5" xPosition="88" yPosition="0"></Sprite>
      <Sprite name="down6" spriteNumber="6" xPosition="110" yPosition="0"></Sprite>
@@ -181,31 +181,31 @@
 
 
 
-   <Sequence name="270" numberSprites="8"  width="21" height="36">
+   <Sequence name="270" numberSprites="8"  width="20" height="32">
 
-     <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="72"></Sprite>
-     <Sprite name="left2" spriteNumber="2" xPosition="22" yPosition="72"></Sprite>
-     <Sprite name="left3" spriteNumber="3" xPosition="44" yPosition="72"></Sprite>
-     <Sprite name="left4" spriteNumber="4" xPosition="66" yPosition="72"></Sprite>
-     <Sprite name="left5" spriteNumber="5" xPosition="88" yPosition="72"></Sprite>
-     <Sprite name="left6" spriteNumber="6" xPosition="110" yPosition="72"></Sprite>
-     <Sprite name="left7" spriteNumber="7" xPosition="132" yPosition="72"></Sprite>
-     <Sprite name="left8" spriteNumber="8" xPosition="155" yPosition="72"></Sprite>
+     <Sprite name="left1" spriteNumber="1" xPosition="0" yPosition="80"></Sprite>
+     <Sprite name="left2" spriteNumber="2" xPosition="22" yPosition="80"></Sprite>
+     <Sprite name="left3" spriteNumber="3" xPosition="42" yPosition="80"></Sprite>
+     <Sprite name="left4" spriteNumber="4" xPosition="64" yPosition="80"></Sprite>
+     <Sprite name="left5" spriteNumber="5" xPosition="85" yPosition="80"></Sprite>
+     <Sprite name="left6" spriteNumber="6" xPosition="106" yPosition="80"></Sprite>
+     <Sprite name="left7" spriteNumber="7" xPosition="127" yPosition="80"></Sprite>
+     <Sprite name="left8" spriteNumber="8" xPosition="152" yPosition="80"></Sprite>
     
    </Sequence>
 
 
 
-   <Sequence name="90" numberSprites="8" width="21" height="36">
+   <Sequence name="90" numberSprites="8" width="20" height="32">
 
-     <Sprite name="right1" spriteNumber="1" xPosition="0" yPosition="108"></Sprite>
-     <Sprite name="right2" spriteNumber="2" xPosition="22" yPosition="108"></Sprite>
-     <Sprite name="right3" spriteNumber="3" xPosition="44" yPosition="108"></Sprite>
-     <Sprite name="right4" spriteNumber="4" xPosition="66" yPosition="108"></Sprite>
-     <Sprite name="right5" spriteNumber="5" xPosition="88" yPosition="108"></Sprite>
-     <Sprite name="right6" spriteNumber="6" xPosition="110" yPosition="108"></Sprite>
-     <Sprite name="right7" spriteNumber="7" xPosition="132" yPosition="108"></Sprite>
-     <Sprite name="right8" spriteNumber="8" xPosition="155" yPosition="108"></Sprite>
+     <Sprite name="right1" spriteNumber="1" xPosition="3" yPosition="119"></Sprite>
+     <Sprite name="right2" spriteNumber="2" xPosition="24" yPosition="119"></Sprite>
+     <Sprite name="right3" spriteNumber="3" xPosition="49" yPosition="119"></Sprite>
+     <Sprite name="right4" spriteNumber="4" xPosition="70" yPosition="119"></Sprite>
+     <Sprite name="right5" spriteNumber="5" xPosition="91" yPosition="119"></Sprite>
+     <Sprite name="right6" spriteNumber="6" xPosition="112" yPosition="119"></Sprite>
+     <Sprite name="right7" spriteNumber="7" xPosition="133" yPosition="119"></Sprite>
+     <Sprite name="right8" spriteNumber="8" xPosition="154" yPosition="119"></Sprite>
 
 
 
@@ -228,7 +228,7 @@
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/JungleKey.png"></StartUp>
     
     <Animations numSequences="1">
-      <Sequence name="-1" numberSprites="1" width="16" height="28">
+      <Sequence name="-1" numberSprites="1" width="10" height="17">
         <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
       </Sequence>
     </Animations>
@@ -269,7 +269,7 @@
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/ShinyKey.png"></StartUp>
 
     <Animations numSequences="1">
-      <Sequence name="-1" numberSprites="1" width="16" height="28">
+      <Sequence name="-1" numberSprites="1" width="10" height="17">
         <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
       </Sequence>
     </Animations>
@@ -346,7 +346,7 @@
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/IceKey.png"></StartUp>
     
     <Animations numSequences="1">
-      <Sequence name="-1" numberSprites="1" width="18" height="28">
+      <Sequence name="-1" numberSprites="1" width="11" height="17">
         <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
       </Sequence>
     </Animations>
@@ -362,7 +362,7 @@
 
   <IceChest type="IceChest" identifier="11">
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/IceChest.png"></StartUp>
-    
+
     <Animations numSequences="1">
       <Sequence name="1" numberSprites="1" width="24" height="24">
         <Sprite name="closed1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
@@ -372,7 +372,7 @@
         <Sprite name="open1" spriteNumber="1" xPosition="51" yPosition="0"></Sprite>
       </Sequence>
     </Animations>
-    
+
     <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
 
     <Components>
@@ -383,16 +383,71 @@
   </IceChest>
 
 
-  <BigDoor type="BigDoor" identifier="12">
-    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/BigDoor.png"></StartUp>
+  
+  <Mimic type="Mimic" identifier="12">
+    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/Mimic.png"></StartUp>
     
     <Animations numSequences="1">
-      <Sequence name="1" numberSprites="1" width="22" height="34">
-        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      <Sequence name="1" numberSprites="1" width="48" height="42">
+        <Sprite name="closed1" spriteNumber="1" xPosition="6" yPosition="16"></Sprite>
+      </Sequence>
+
+      <Sequence name="180" numberSprites="7" width="48" height="42">
+        <Sprite name="down1" spriteNumber="1" xPosition="6" yPosition="16"></Sprite>
+        <Sprite name="down2" spriteNumber="2" xPosition="6" yPosition="74"></Sprite>
+        <Sprite name="down3" spriteNumber="3" xPosition="6" yPosition="134"></Sprite>
+        <Sprite name="down4" spriteNumber="4" xPosition="6" yPosition="192"></Sprite>
+        <Sprite name="down5" spriteNumber="5" xPosition="6" yPosition="250"></Sprite>
+        <Sprite name="down6" spriteNumber="6" xPosition="6" yPosition="310"></Sprite>
+        <Sprite name="down7" spriteNumber="7" xPosition="6" yPosition="370"></Sprite>
+      </Sequence>
+
+      <Sequence name="270" numberSprites="7" width="38" height="42">
+        <Sprite name="left1" spriteNumber="1" xPosition="10" yPosition="436"></Sprite>
+        <Sprite name="left2" spriteNumber="2" xPosition="10" yPosition="492"></Sprite>
+        <Sprite name="left3" spriteNumber="3" xPosition="10" yPosition="552"></Sprite>
+        <Sprite name="left4" spriteNumber="4" xPosition="6" yPosition="610"></Sprite>
+        <Sprite name="left5" spriteNumber="5" xPosition="2" yPosition="670"></Sprite>
+        <Sprite name="left6" spriteNumber="6" xPosition="4" yPosition="730"></Sprite>
+        <Sprite name="left7" spriteNumber="7" xPosition="0" yPosition="782"></Sprite>
+      </Sequence>
+
+      <Sequence name="90" numberSprites="7" width="38" height="42">
+        <Sprite name="right1" spriteNumber="1" xPosition="11" yPosition="851"></Sprite>
+        <Sprite name="right2" spriteNumber="2" xPosition="9" yPosition="907"></Sprite>
+        <Sprite name="right3" spriteNumber="3" xPosition="9" yPosition="967"></Sprite>
+        <Sprite name="right4" spriteNumber="4" xPosition="7" yPosition="1025"></Sprite>
+        <Sprite name="right5" spriteNumber="5" xPosition="7" yPosition="1085"></Sprite>
+        <Sprite name="right6" spriteNumber="6" xPosition="7" yPosition="1145"></Sprite>
+        <Sprite name="right7" spriteNumber="7" xPosition="7" yPosition="1197"></Sprite>
+      </Sequence>
+      
+    </Animations>
+
+
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="48" width ="42"></Physics>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Body"></component>
+      <component name="Mimic"></component>
+    </Components>
+  </Mimic>
+
+
+  <BigDoor type="BigDoor" identifier="13">
+    <StartUp red="255" green="0" blue="0" alpha="255" path="./Assets/BigDoor.png"></StartUp>
+    
+    <Animations numSequences="1">
+      <Sequence name="1" numberSprites="1" width="28" height="28">
+        <Sprite name="closed1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
+      </Sequence>
+      <Sequence name="2" numberSprites="1" width="28" height="28">
+        <Sprite name="open1" spriteNumber="1" xPosition="101" yPosition="101"></Sprite>
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -400,7 +455,5 @@
       <component name="Door"></component>
     </Components>
   </BigDoor>
-
-
 
 </Object>

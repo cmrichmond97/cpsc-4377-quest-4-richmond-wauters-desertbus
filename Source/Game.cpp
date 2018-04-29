@@ -152,7 +152,7 @@ bool Game::LoadLevel(std::string levelConfig)
 					level == "IceChest")
 				{
 					inits.keyType = keyType_Convert(levelElement->Attribute("keyType"));
-					
+					inits.heldLoot = gameLoot_Convert(levelElement->Attribute("heldLoot"));
 				}
 				/*
 
@@ -247,26 +247,27 @@ bool Game::Update()
 				gameOver = objects[i]->getIsDead();
 
 			}
-			if (objects[i]->getType() == BIG_DOOR)
-			{
-				if (objects[i]->getLevelClear())
-				{
-					if (level == 1)
-					{
-						LoadLevel("./Assets/Config/level2.xml");
-						level = 2;
-					}
-					else
-					{
-						gameOver = true;
-					}
-				}
-			}
+
 			if (newObject)
 			{
 				objects.push_back(newObject);
 			}
 		}
+	}
+	if (blackboard->getGameClear() == true)
+	{
+		
+		if (level == 1)
+		{
+			LoadLevel("./Assets/Config/level2.xml");
+			level = 2;
+			blackboard->setGameClear(false);
+		}
+		else
+		{
+			//gameOver = true;
+		}
+		
 	}
 	view->update(level);
 	iDevice->update();
@@ -281,6 +282,6 @@ bool Game::Draw()
 		objects[i]->draw();
 	}
 	//Draw the Debug overlay
-	//pDevice->world->DrawDebugData();
+	pDevice->world->DrawDebugData();
 	return(true);
 }

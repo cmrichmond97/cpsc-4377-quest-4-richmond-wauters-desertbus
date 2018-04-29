@@ -24,7 +24,7 @@ bool BanditComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 		printf("Bandit Component failed to initialize");
 		exit(1);
 	}
-	owner->getComponent<BodyComponent>()->setState(RIGHT);
+	owner->getComponent<BodyComponent>()->setState(DOWN);
 	return(true);
 }
 

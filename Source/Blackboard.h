@@ -9,7 +9,7 @@ public:
 
 	void setPlayer(Object* newPlayer) { player = newPlayer; }
 	Object* getPlayer() { return(player); }
-	void setGameClear(bool) { gameClear = true; }
+	void setGameClear(bool clear) { gameClear = clear; }
 	bool getGameClear() { return (gameClear); }
 
 private:

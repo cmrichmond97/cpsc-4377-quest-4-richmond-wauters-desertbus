@@ -10,6 +10,7 @@
 #include "OrcComponent.h"
 #include "BanditComponent.h"
 #include "Blackboard.h"
+#include "DoorComponent.h"
 
 
 void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold)
@@ -53,12 +54,16 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 
 		if (objectBType == BIG_DOOR)
 		{
-			objectA->getBlackboard()->setGameClear(true);
+			if (objectB->getComponent<DoorComponent>()->getOpened())
+			{
+				objectA->getBlackboard()->setGameClear(true);
+			}
 		}
 
 		//if we found an enemy, we die.
 		if (objectBType == BANDIT ||
-			objectBType == ORC)
+			objectBType == ORC  ||
+			objectBType == MIMIC)
 		{
 			objectA->kill();
 		}

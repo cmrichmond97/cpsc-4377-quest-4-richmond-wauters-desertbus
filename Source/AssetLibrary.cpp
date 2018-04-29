@@ -10,6 +10,7 @@
 #include "InputComponent.h"
 #include "InventoryComponent.h"
 #include "KeyComponent.h"
+#include "MimicComponent.h"
 #include "OrcComponent.h"
 #include "SpriteComponent.h"
 
@@ -196,6 +197,10 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				{
 					components.push_back(KEY_COMPONENT);
 				}
+				if (component == "Mimic")
+				{
+					components.push_back(MIMIC_COMPONENT);
+				}
 				if (component == "Orc")
 				{
 					components.push_back(ORC_COMPONENT);
@@ -261,6 +266,9 @@ std::vector<Component*> AssetLibrary::getComponentList(OBJECT_TYPE type)
 			break;
 		case KEY_COMPONENT:
 			componentPtrList.push_back(new KeyComponent);
+			break;
+		case MIMIC_COMPONENT:
+			componentPtrList.push_back(new MimicComponent);
 			break;
 		case ORC_COMPONENT:
 			componentPtrList.push_back(new OrcComponent);

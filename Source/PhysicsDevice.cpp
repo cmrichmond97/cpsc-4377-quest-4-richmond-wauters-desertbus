@@ -67,7 +67,19 @@ bool PhysicsDevice::createFixture(Object * object, GAME_PHYSICS physics, GAME_OB
 
 
 	//set body type
-	switch (object->getType())
+	switch (physics.bodyType)
+	{
+	case GAME_DYNAMIC:
+		bd->type = b2_dynamicBody;
+		break;
+	case GAME_STATIC:
+		bd->type = b2_staticBody;
+		break;
+	}
+
+
+
+	/*switch (object->getType())
 	{
 	case PLAYER:
 		bd->type = b2_dynamicBody;
@@ -98,7 +110,7 @@ bool PhysicsDevice::createFixture(Object * object, GAME_PHYSICS physics, GAME_OB
 		break;
 	default:
 		break;
-	}
+	}*/
 	//subtract off half the width.
 	presets.startPos.x += (physics.dimensions.x / 2);
 	//subtract off half the height

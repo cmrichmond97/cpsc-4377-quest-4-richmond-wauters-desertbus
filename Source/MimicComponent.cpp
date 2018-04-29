@@ -2,6 +2,7 @@
 #include "Object.h"
 #include "Blackboard.h"
 #include "BodyComponent.h"
+#include "PhysicsDevice.h"
 
 
 MimicComponent::MimicComponent()
@@ -14,23 +15,40 @@ MimicComponent::~MimicComponent()
 
 bool MimicComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 {
+	owner = inits.owner;
+	pDevice = inits.pDevice;
 	player = owner->getBlackboard()->getPlayer();
 	playerBody = player->getComponent<BodyComponent>();
 	bodyComponent = owner->getComponent<BodyComponent>();
+	owner->getComponent<BodyComponent>()->setState(CLOSED);
+	pDevice->setAngle(owner, DOWN);
 	return true;
 }
 
 Object * MimicComponent::update(float dt)
 {
+	if (pDevice->getPosition(player)->y <= SCREEN_HEIGHT / 2 && awake == false)
+	{
+		awake = true;
+		owner->getComponent<BodyComponent>()->setState(DOWN);
+	}
+	
 	if (awake)
 	{
-		//find angle between mouse and ship
-		float targetAngle = (std::atan2(playerBody->getPositionPtr()->y - bodyComponent->getPositionPtr()->y, playerBody->getPositionPtr()->x - bodyComponent->getPositionPtr()->x) * 180 / PI);
+		GAME_INT forceMultiplier =5;
+		//find angle between player and mimic
 
-		//compare to ship's angle. the -90 is to adjust the sprite. Depending on you sprite, your may need to adjust this
-		float diff = targetAngle - bodyComponent->getAngle() - 90;
+		float mimicPosPtrX = pDevice->getPosition(owner)->x;
+		float mimicPosPtrY = pDevice->getPosition(owner)->y;
+		float playerPosPtrX = pDevice->getPosition(player)->x;
+		float playerPosPtrY = pDevice->getPosition(player)->y;
+		
+		float targetAngle = (std::atan2(playerPosPtrY - mimicPosPtrY, playerPosPtrX - mimicPosPtrY) * 180 / PI);
 
-		//ensures we don't go mor than 180 degres.
+		//compare to mimic's angle. 
+		float diff = targetAngle - pDevice->getAngle(owner);
+
+		//ensures we don't go more than 180 degres.
 		while (diff < -180) {
 			diff += 360;
 		}
@@ -38,27 +56,29 @@ Object * MimicComponent::update(float dt)
 			diff -= 360;
 		}
 		//adjust angle of sprite
-		//&&'s are to avoid the sprite from shaking as it is lined up with the mouse or stopped
+		
 		if (diff < -2 )
 		{
-			bodyComponent->setAngle(bodyComponent->getAngle() + 2);
+			pDevice->setAngle(owner, pDevice->getAngle(owner) + 1);
 		}
 		else if (diff > 0 && diff < 179)
 		{
-			bodyComponent->setAngle(bodyComponent->getAngle() - 2);
+			pDevice->setAngle(owner, pDevice->getAngle(owner) - 1);
 		}
 
 
-		//use distance formula to figure out how far the mouse is from the sprite.
-		float approach = distance(playerBody->getPositionPtr(), bodyComponent->getPositionPtr());
+		GAME_VEC appliedForce;
+
+		appliedForce.y = (float)sinf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
+		appliedForce.x = (float)cosf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
+		
+		pDevice->setLinearVelocity(owner, appliedForce);
 	}
 	return nullptr;
 }
 
-float MimicComponent::distance(GAME_VEC* src1, GAME_VEC* src2)
+
+
+void MimicComponent::finish()
 {
-	GAME_VEC diff;
-		diff.x = src1->x - src2->x;
-		diff.y = src1->y - src2->y;
-	return sqrt(diff.x*diff.x + diff.y*diff.y);
 }
