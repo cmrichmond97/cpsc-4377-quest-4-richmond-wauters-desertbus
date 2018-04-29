@@ -50,7 +50,7 @@
 
     <StartUp red="72" green="127" blue="128" alpha="255" path="./Assets/spritesheet.png"></StartUp>
 
-    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
       
     <Components>
       <component name="Sprite"></component>
@@ -114,7 +114,7 @@
 
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/Orc.png"></StartUp>
   
-    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="10.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="23" width ="18"></Physics>
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="10.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="23" width ="18" class="1"></Physics>
  
     <Components>
       <component name="Sprite"></component>
@@ -136,7 +136,7 @@
 
     <StartUp red="255" green="0" blue="0" alpha="255" path="./Assets/block.png"></StartUp>
   
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="28" width ="28"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="28" width ="28" class="-1"></Physics>
   
     <Components>
       <component name="Sprite"></component>
@@ -214,7 +214,7 @@
 
    <StartUp red="207" green="167" blue="252" alpha="255" path="./Assets/bandit.png"></StartUp>
 
-   <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="37" width ="28"></Physics>
+   <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="37" width ="28" class="1"></Physics>
 
    <Components>
       <component name="Sprite"></component>
@@ -233,7 +233,7 @@
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
     
     <Components>
       <component name="Sprite"></component>
@@ -255,7 +255,7 @@
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -274,7 +274,7 @@
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -296,7 +296,7 @@
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -305,42 +305,6 @@
     </Components>
   </ShinyChest>
 
-
-  <RuinsKey type="RuinsKey" identifier="8">
-    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/RuinsKey.png"></StartUp>
-    
-    <Animations numSequences="1">
-      <Sequence name="-1" numberSprites="1" width="32" height="20">
-        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
-      </Sequence>
-    </Animations>
-    
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
-
-    <Components>
-      <component name="Sprite"></component>
-      <component name="Body"></component>
-      <component name="Key"></component>
-    </Components>
-  </RuinsKey>
-
-  <RuinsChest type="RuinsChest" identifier="9">
-    <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/RuinsChest.png"></StartUp>
-    
-    <Animations numSequences="1">
-      <Sequence name="-1" numberSprites="1" width="24" height="24">
-        <Sprite name="idle1" spriteNumber="1" xPosition="0" yPosition="0"></Sprite>
-      </Sequence>
-    </Animations>
-    
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="false" height ="25" width ="18"></Physics>
-
-    <Components>
-      <component name="Sprite"></component>
-      <component name="Body"></component>
-      <component name="Chest"></component>
-    </Components>
-  </RuinsChest>
 
   <IceKey type="IceKey" identifier="10">
     <StartUp red="0" green="0" blue="0" alpha="255" path="./Assets/IceKey.png"></StartUp>
@@ -351,7 +315,7 @@
       </Sequence>
     </Animations>
   
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -373,7 +337,7 @@
       </Sequence>
     </Animations>
 
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -425,7 +389,7 @@
     </Animations>
 
 
-    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="48" width ="42"></Physics>
+    <Physics bodyType="GAME_DYNAMIC" bodyShape="GAME_RECTANGLE" density ="1.0f" restitution="0.0f" aDamping="4.0f" lDamping="0.0f" physicsOn="true" height ="42" width ="48" class="-1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -447,7 +411,7 @@
       </Sequence>
     </Animations>
     
-    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18"></Physics>
+    <Physics bodyType="GAME_STATIC" bodyShape="GAME_RECTANGLE" density ="15.0f" restitution="0.0f" aDamping="0.0f" lDamping="0.0f" physicsOn="true" height ="25" width ="18" class="1"></Physics>
 
     <Components>
       <component name="Sprite"></component>
@@ -455,5 +419,18 @@
       <component name="Door"></component>
     </Components>
   </BigDoor>
+
+  <Loot type="Loot" identifier="14">
+    <Sprites>
+      <Sprite name="Bed" red="255" green="0" blue="0" alpha="255" path="./Assets/Bed.png"></Sprite>
+      <Sprite name="Couch" red="255" green="0" blue="0" alpha="255" path="./Assets/Couch.png"></Sprite>
+      <Sprite name="Table" red="255" green="0" blue="0" alpha="255" path="./Assets/Table.png"></Sprite>
+    </Sprites>
+
+    <Components>
+      <component name="Sprite"></component>
+      <component name="Loot"></component>
+    </Components>
+  </Loot>
 
 </Object>

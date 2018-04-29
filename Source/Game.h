@@ -48,7 +48,7 @@ private:
 	std::vector<Object*> objects;
 	GameObjectFactory* objectFactory;
 	GAME_OBJECTFACTORY_INITIALIZERS inits;
-	int level;
+
 
 
 };

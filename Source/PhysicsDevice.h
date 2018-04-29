@@ -29,6 +29,7 @@ public:
 	bool setStopPhysics(Object* object);
 	bool setAngle(Object* object, GAME_FLT angle);
 
+
 	GAME_FLT getAngularVelocity(Object* object);
 	GAME_VEC* getPosition(Object* object);
 	GAME_FLT getAngle(Object* object);

@@ -10,6 +10,7 @@
 #include "InputComponent.h"
 #include "InventoryComponent.h"
 #include "KeyComponent.h"
+#include "LootComponent.h"
 #include "MimicComponent.h"
 #include "OrcComponent.h"
 #include "SpriteComponent.h"
@@ -129,6 +130,29 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 			paths[objectTypeEnum] = newTexture;
 		}//Initialize Texture
 		
+		initElement = element->FirstChildElement("Sprites");
+		if (initElement)
+		{// Initialize Loot Textures
+			initElement = initElement->FirstChildElement("Sprite");
+			while (initElement) {
+				COLOR_KEY key;
+				Texture* newTexture = new Texture;
+				std::string path, name;
+				initElement->QueryIntAttribute("red", &key.r);
+				initElement->QueryIntAttribute("green", &key.g);
+				initElement->QueryIntAttribute("blue", &key.b);
+				initElement->QueryIntAttribute("alpha", &key.a);
+				path = initElement->Attribute("path");
+				name = initElement->Attribute("name");
+				if (!newTexture->load(gDevice->getRenderer(), path, key))
+				{
+					return(false);//if load failed
+				}
+				lootPaths[gameLoot_Convert(name)] = newTexture;
+				initElement = initElement->NextSiblingElement("Sprite");
+			}
+		}//Initialize Loot Textures
+
 		initElement = element->FirstChildElement("Physics");
 		if(initElement)
 		{//Initialize Physics
@@ -151,7 +175,7 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 			initElement->QueryBoolAttribute("physicsOn", &newPhysics.physicsOn);
 			initElement->QueryFloatAttribute("height", &newPhysics.dimensions.y);
 			initElement->QueryFloatAttribute("width", &newPhysics.dimensions.x);
-
+			initElement->QueryIntAttribute("class", &newPhysics.collisionClass);
 			objectPhysics[objectTypeEnum] = newPhysics;
 
 		}//Initialize Physics
@@ -197,6 +221,10 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				{
 					components.push_back(KEY_COMPONENT);
 				}
+				if (component == "Loot")
+				{
+					components.push_back(LOOT_COMPONENT);
+				}
 				if (component == "Mimic")
 				{
 					components.push_back(MIMIC_COMPONENT);
@@ -228,6 +256,11 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 Texture* AssetLibrary::getTexture(OBJECT_TYPE type)
 {
 	return(paths[type]);
+}
+
+Texture * AssetLibrary::getTexture(GAME_LOOT loot)
+{
+	return (lootPaths[loot]);
 }
 
 std::map<ANIM_STATE, std::vector<SPRITE_CLIP*>*>* AssetLibrary::getAnimMap(OBJECT_TYPE objectType)
@@ -266,6 +299,9 @@ std::vector<Component*> AssetLibrary::getComponentList(OBJECT_TYPE type)
 			break;
 		case KEY_COMPONENT:
 			componentPtrList.push_back(new KeyComponent);
+			break;
+		case LOOT_COMPONENT:
+			componentPtrList.push_back(new LootComponent);
 			break;
 		case MIMIC_COMPONENT:
 			componentPtrList.push_back(new MimicComponent);

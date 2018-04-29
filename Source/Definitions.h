@@ -9,6 +9,7 @@ class GameObjectFactory;
 class BodyComponent;
 class SpriteComponent;
 class Blackboard;
+
 #include <string>
 #include "tinyxml\tinyxml.h"
 #include "tinyxml\tinystr.h"
@@ -70,7 +71,7 @@ typedef struct GAME_VEC
 //========================================
 //Base Game Constants
 //========================================
-const GAME_INT SCREEN_WIDTH = 588;
+const GAME_INT SCREEN_WIDTH = 628;
 const GAME_INT SCREEN_HEIGHT = 420;
 const GAME_INT GAME_FPS = 100;
 const GAME_FLT dt = 1/GAME_FPS;
@@ -85,7 +86,7 @@ const GAME_INT BANDIT_YSPEED = 10;
 //Event Types
 enum GAME_EVENT { GAME_NA, GAME_UP, GAME_DOWN, GAME_LEFT, GAME_RIGHT, GAME_QUIT };
 enum ANIM_STATE { NA = -1, UP = 0, DOWN = 180, LEFT = 270, RIGHT = 90, CLOSED = 1, OPEN = 2 };
-enum OBJECT_TYPE { PLAYER, ORC, BANDIT, BLOCK, JUNGLE_KEY, JUNGLE_CHEST, SHINY_KEY, SHINY_CHEST, RUINS_KEY, RUINS_CHEST, ICE_KEY, ICE_CHEST, MIMIC, BIG_DOOR };
+enum OBJECT_TYPE { PLAYER, ORC, BANDIT, BLOCK, JUNGLE_KEY, JUNGLE_CHEST, SHINY_KEY, SHINY_CHEST, RUINS_KEY, RUINS_CHEST, ICE_KEY, ICE_CHEST, MIMIC, BIG_DOOR, LOOT };
 enum KEY_TYPE { JUNGLE, SHINY, RUINS, ICE };
 enum GAME_OBJECT_SHAPE { GAME_RECTANGLE, GAME_CIRCLE };
 enum GAME_BODY_TYPE { GAME_STATIC, GAME_KINEMATIC, GAME_DYNAMIC };
@@ -99,6 +100,7 @@ enum GAME_COMPONENTS_LIST {
 	INPUT_COMPONENT,
 	INVENTORY_COMPONENT,
 	KEY_COMPONENT,
+	LOOT_COMPONENT,
 	MIMIC_COMPONENT,
 	ORC_COMPONENT,
 	SPRITE_COMPONENT
@@ -128,6 +130,7 @@ typedef struct GAME_OBJECTFACTORY_INITIALIZERS
 	GAME_FLT angle;
 	KEY_TYPE keyType;
 	GAME_LOOT heldLoot;
+	int speed;
 
 	//DEVICE POINTERS
 	AssetLibrary* assetLibrary;
@@ -138,7 +141,6 @@ typedef struct GAME_OBJECTFACTORY_INITIALIZERS
 	View* view;
 	GameObjectFactory* factory;
 	Blackboard* blackboard;
-
 }GAME_OBJECTFACTORY_INITIALIZERS;
 
 typedef struct SPRITE_CLIP
@@ -160,6 +162,7 @@ typedef struct GAME_PHYSICS
 	GAME_FLT angularDamping;
 	GAME_FLT linearDamping;
 	GAME_FLT force;
+	int collisionClass;
 	bool physicsOn;
 	GAME_VEC dimensions;
 }GAME_PHYSICS;
@@ -180,6 +183,7 @@ inline OBJECT_TYPE objectType_Convert(std::string objectType)
 	if (objectType == "IceChest" || objectType == "iceChest")return(ICE_CHEST);
 	if (objectType == "Mimic" || objectType == "mimic")return(MIMIC);
 	if(objectType == "BigDoor" || objectType == "bigDoor")return(BIG_DOOR);
+	if (objectType == "Loot" || objectType == "loot")return(LOOT);
 	return OBJECT_TYPE();
 }
 

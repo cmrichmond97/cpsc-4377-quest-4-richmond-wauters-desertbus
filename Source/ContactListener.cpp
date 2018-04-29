@@ -132,7 +132,6 @@ void ContactListener::PostSolve(b2Contact * contact, const b2ContactImpulse * im
 		appliedForce.x = (float)cosf(((objectB->getComponent<BodyComponent>()->getState())*PI / 180) - (PI / 2))*forceMultiplier;
 		objectB->getComponent<OrcComponent>()->setLinearVelocity(appliedForce);
 	}
-
 }
 
 void ContactListener::pickUpKey(Object* player, Object* item)

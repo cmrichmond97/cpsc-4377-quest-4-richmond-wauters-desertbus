@@ -8,6 +8,7 @@
 
 class GraphicsDevice;
 class Texture;
+class LootComponent;
 
 class SpriteComponent:
 	public Component
@@ -27,6 +28,7 @@ int animNumber; //integer for storing what sprite number we're on for the curren
 GraphicsDevice* gDevice;
 AssetLibrary* assetLibrary;
 BodyComponent* bodyComponent;
+LootComponent* lootComponent;
 View* view;
 Texture* texture;
 };

@@ -37,10 +37,10 @@ Game::~Game()
 
 bool Game::Initialize(std::string objectConfig)
 {
-	level = 1;
+	
 
 	blackboard = new Blackboard;//create the blackboard
-
+	blackboard->setLevel(2);
 	inits.blackboard = blackboard;//add the blackboard to the initializers
 
 	gDevice = new GraphicsDevice(SCREEN_WIDTH, SCREEN_HEIGHT);//create the graphics device
@@ -154,6 +154,10 @@ bool Game::LoadLevel(std::string levelConfig)
 					inits.keyType = keyType_Convert(levelElement->Attribute("keyType"));
 					inits.heldLoot = gameLoot_Convert(levelElement->Attribute("heldLoot"));
 				}
+				if (level == "Bandit")
+				{
+					levelElement->QueryIntAttribute("speed", &inits.speed);
+				}
 				/*
 
 				Call the factory's create method, then push the returned
@@ -234,10 +238,10 @@ bool Game::Update()
 {
 	bool gameOver = false;
 	bool levelCleared = false;
-
 	for (int i = 0; i<objects.size(); i++)
 	{
-		if (objects[i] != nullptr)
+
+		if (!gameOver)
 		{
 
 
@@ -245,6 +249,7 @@ bool Game::Update()
 			if (objects[i]->getType() == PLAYER)
 			{
 				gameOver = objects[i]->getIsDead();
+				
 
 			}
 
@@ -256,26 +261,38 @@ bool Game::Update()
 			{
 				objects[i]->finish();
 				delete objects[i];
+				objects.erase(objects.begin() + i);
 			}
 		}
 	}
 	if (blackboard->getGameClear() == true)
 	{
 		
-		if (level == 1)
+		if (blackboard->getLevel() == 1)
 		{
+			for (int j = 0; j < objects.size();)
+			{
+
+				objects[j]->finish();
+				delete objects[j];
+				objects.erase(objects.begin() + j);
+
+			}
 			LoadLevel("./Assets/Config/level2.xml");
-			level = 2;
+			blackboard->setLevel(2);
 			blackboard->setGameClear(false);
 		}
 		else
 		{
-			//gameOver = true;
+			gameOver = true;
 		}
 		
 	}
-	view->update(level);
-	iDevice->update();
+	if (!gameOver)
+	{
+		view->update(blackboard->getLevel());
+		iDevice->update();
+	}
 	return(gameOver);
 }
 

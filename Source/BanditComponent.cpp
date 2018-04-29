@@ -18,6 +18,7 @@ bool BanditComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 	pDevice = inits.pDevice;
 	bodyComponent = owner->getComponent<BodyComponent>();
 	spriteComponent = owner->getComponent<SpriteComponent>();
+	maxSteps = inits.speed;
 
 	if (!(bodyComponent && spriteComponent))
 	{

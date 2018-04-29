@@ -94,6 +94,9 @@
     <ClCompile Include="Source\MimicComponent.cpp">
       <Filter>Source Files\Components\Behavior Components</Filter>
     </ClCompile>
+    <ClCompile Include="Source\LootComponent.cpp">
+      <Filter>Source Files\Components\Behavior Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\AssetLibrary.h">
@@ -181,6 +184,9 @@
       <Filter>Header Files\Devices and Libraries</Filter>
     </ClInclude>
     <ClInclude Include="Source\MimicComponent.h">
+      <Filter>Header Files\Components\Behavior Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LootComponent.h">
       <Filter>Header Files\Components\Behavior Components</Filter>
     </ClInclude>
   </ItemGroup>
@@ -277,6 +283,15 @@
       <Filter>Resource Files\Spritesheets</Filter>
     </Image>
     <Image Include="Assets\spritesheet.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\Bed.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\Couch.png">
+      <Filter>Resource Files\Spritesheets</Filter>
+    </Image>
+    <Image Include="Assets\Table.png">
       <Filter>Resource Files\Spritesheets</Filter>
     </Image>
   </ItemGroup>

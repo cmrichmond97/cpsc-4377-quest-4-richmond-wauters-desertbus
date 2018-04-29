@@ -27,7 +27,7 @@ bool MimicComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 
 Object * MimicComponent::update(float dt)
 {
-	if (pDevice->getPosition(player)->y <= SCREEN_HEIGHT / 2 && awake == false)
+	if (pDevice->getPosition(player)->y <= 112 && awake == false)
 	{
 		awake = true;
 		owner->getComponent<BodyComponent>()->setState(DOWN);
@@ -38,10 +38,10 @@ Object * MimicComponent::update(float dt)
 		GAME_INT forceMultiplier =5;
 		//find angle between player and mimic
 
-		float mimicPosPtrX = pDevice->getPosition(owner)->x;
-		float mimicPosPtrY = pDevice->getPosition(owner)->y;
-		float playerPosPtrX = pDevice->getPosition(player)->x;
-		float playerPosPtrY = pDevice->getPosition(player)->y;
+		float mimicPosPtrX = pDevice->getPosition(owner)->x+24;
+		float mimicPosPtrY = pDevice->getPosition(owner)->y+21;
+		float playerPosPtrX = pDevice->getPosition(player)->x + 9;
+		float playerPosPtrY = pDevice->getPosition(player)->y + 24;
 		
 		float targetAngle = (std::atan2(playerPosPtrY - mimicPosPtrY, playerPosPtrX - mimicPosPtrY) * 180 / PI);
 
@@ -59,11 +59,11 @@ Object * MimicComponent::update(float dt)
 		
 		if (diff < -2 )
 		{
-			pDevice->setAngle(owner, pDevice->getAngle(owner) + 1);
+			pDevice->setAngle(owner, pDevice->getAngle(owner) - 1);
 		}
 		else if (diff > 0 && diff < 179)
 		{
-			pDevice->setAngle(owner, pDevice->getAngle(owner) - 1);
+			pDevice->setAngle(owner, pDevice->getAngle(owner) + 1);
 		}
 
 

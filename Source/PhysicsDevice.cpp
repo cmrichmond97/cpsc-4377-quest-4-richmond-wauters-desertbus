@@ -72,45 +72,18 @@ bool PhysicsDevice::createFixture(Object * object, GAME_PHYSICS physics, GAME_OB
 	case GAME_DYNAMIC:
 		bd->type = b2_dynamicBody;
 		break;
+	case GAME_KINEMATIC:
+		bd->type = b2_kinematicBody;
+		break;
 	case GAME_STATIC:
 		bd->type = b2_staticBody;
 		break;
 	}
 
+	shapefd.filter.groupIndex = physics.collisionClass;
 
 
-	/*switch (object->getType())
-	{
-	case PLAYER:
-		bd->type = b2_dynamicBody;
-		break;
-	case ORC:
-		bd->type = b2_dynamicBody;
-		break;
-	case BANDIT:
-		bd->type = b2_dynamicBody;
-		break;
-	case BLOCK:
-		bd->type = b2_staticBody;
-		break;
-	case JUNGLE_KEY:
-	case SHINY_KEY:
-	case RUINS_KEY:
-	case ICE_KEY:
-		bd->type = b2_staticBody;
-		break;
-	case JUNGLE_CHEST:
-	case SHINY_CHEST:
-	case RUINS_CHEST:
-	case ICE_CHEST:
-		bd->type = b2_staticBody;
-		break;
-	case BIG_DOOR:
-		bd->type = b2_staticBody;
-		break;
-	default:
-		break;
-	}*/
+
 	//subtract off half the width.
 	presets.startPos.x += (physics.dimensions.x / 2);
 	//subtract off half the height

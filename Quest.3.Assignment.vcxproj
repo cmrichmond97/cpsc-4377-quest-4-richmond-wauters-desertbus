@@ -28,6 +28,7 @@
     <ClCompile Include="Source\InputDevice.cpp" />
     <ClCompile Include="Source\InventoryComponent.cpp" />
     <ClCompile Include="Source\KeyComponent.cpp" />
+    <ClCompile Include="Source\LootComponent.cpp" />
     <ClCompile Include="Source\MimicComponent.cpp" />
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\OrcComponent.cpp" />
@@ -62,6 +63,7 @@
     <ClInclude Include="Source\InputDevice.h" />
     <ClInclude Include="Source\InventoryComponent.h" />
     <ClInclude Include="Source\KeyComponent.h" />
+    <ClInclude Include="Source\LootComponent.h" />
     <ClInclude Include="Source\MimicComponent.h" />
     <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\OrcComponent.h" />
@@ -83,8 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\bandit.png" />
+    <Image Include="Assets\Bed.png" />
     <Image Include="Assets\BigDoor.png" />
     <Image Include="Assets\block.png" />
+    <Image Include="Assets\Couch.png" />
     <Image Include="Assets\IceChest.png" />
     <Image Include="Assets\IceKey.png" />
     <Image Include="Assets\JungleChest.png" />
@@ -96,6 +100,7 @@
     <Image Include="Assets\ShinyChest.png" />
     <Image Include="Assets\ShinyKey.png" />
     <Image Include="Assets\spritesheet.png" />
+    <Image Include="Assets\Table.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DED01E1F-E86B-45A6-99DF-0B794EB7F4EC}</ProjectGuid>

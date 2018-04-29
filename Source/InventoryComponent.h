@@ -14,10 +14,12 @@ public:
 	bool addKey(Object* item);
 	bool addLoot(GAME_LOOT loot);
 	bool getHasKey(KEY_TYPE type) { return(keys[type]); };
-	bool getHasLoot(GAME_LOOT loot) { return inventory[loot]; };
+	bool getHasLoot(GAME_LOOT loot);
 	void finish();
 private:
 	std::map<KEY_TYPE, bool> keys;
-	std::map<GAME_LOOT, bool> inventory;
+	std::map<GAME_LOOT, Object*> inventory;
+	GAME_OBJECTFACTORY_INITIALIZERS presets;
+	Object* newObject;
 };
 

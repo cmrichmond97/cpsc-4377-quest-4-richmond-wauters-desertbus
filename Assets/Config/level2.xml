@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Level>
-<!--Mimic Room-->
+  
+<!--BLOCKS-->
+  
+  <!--MIMIC ROOM-->
   <Block name="Block" xStart="112" yStart="0" xEnd="336" yEnd="0"></Block>
   <Block name="Block" xStart="112" yStart="28" xEnd="112" yEnd="140"></Block>
   <Block name="Block" xStart="336" yStart="28" xEnd="336" yEnd="140"></Block>
   <Block name="Block" xStart="140" yStart="140" xEnd="196" yEnd="140"></Block>
   <Block name="Block" xStart="252" yStart="140" xEnd="308" yEnd="140"></Block>
-  <!--Islo Bandito-->
+  <!--END MIMIC ROOM-->
+  
+  <!--ISLA BANDITO-->
   <Block name="Block" xStart="112" yStart="168" xEnd="196" yEnd="168"></Block>
   <Block name="Block" xStart="252" yStart="168" xEnd="336" yEnd="168"></Block>
   <Block name="Block" xStart="112" yStart="196" xEnd="112" yEnd="392"></Block>
@@ -17,8 +22,9 @@
   <Block name="Block" xStart="196" yStart="252" xEnd="252" yEnd="252"></Block>
   <Block name="Block" xStart="196" yStart="280" xEnd="252" yEnd="280"></Block>
   <Block name="Block" xStart="196" yStart="308" xEnd="252" yEnd="308"></Block>
-
-  <!--Back and forth-->
+  <!--END ISLA BANDITO-->
+  
+  <!--BACK AND FORTH-->
   <Block name="Block" xStart="112" yStart="420" xEnd="196" yEnd="420"></Block>
   <Block name="Block" xStart="252" yStart="420" xEnd="336" yEnd="420"></Block>
   
@@ -28,21 +34,47 @@
   <Block name="Block" xStart="112" yStart="728" xEnd="196" yEnd="728"></Block>
   <Block name="Block" xStart="252" yStart="728" xEnd="336" yEnd="728"></Block>
   
-  <Block name="Block" xStart="224" yStart="486" xEnd="224" yEnd="486"></Block>
-  <Block name="Block" xStart="196" yStart="514" xEnd="196" yEnd="514"></Block>
+  <Block name="Block" xStart="224" yStart="476" xEnd="224" yEnd="476"></Block>
+  <Block name="Block" xStart="196" yStart="504" xEnd="196" yEnd="504"></Block>
   <Block name="Block" xStart="140" yStart="644" xEnd="140" yEnd="644"></Block>
   <Block name="Block" xStart="308" yStart="616" xEnd="308" yEnd="616"></Block>
+  <!--END BACK AND FORTH-->
   
-  <!--Starting off-->
-  <Block name="Block" xStart="196" yStart="756" xEnd="196" yEnd="784"></Block>
-  <Block name="Block" xStart="252" yStart="756" xEnd="252" yEnd="784"></Block>
+  <!--STARTING OFF-->
+  <Block name="Block" xStart="196" yStart="756" xEnd="196" yEnd="812"></Block>
+  <Block name="Block" xStart="252" yStart="756" xEnd="252" yEnd="812"></Block>
 
-  <Block name="Block" xStart="196" yStart="812" xEnd="252" yEnd="812"></Block>
-
-
-
-  <!---->
-
-
+  
+  <!--END STARTING OFF-->
+  
+<!--END BLOCKS-->
+  
+<!--PLAYER-->
   <Player name="Player" xPosition="228" yPosition="784" ></Player>
+<!--END PLAYER-->
+  
+<!--ENEMIES-->
+
+  <!--BANDITS-->
+<!--  <Bandit name="Bandit" xPosition="295" yPosition="217" speed ="13"></Bandit>
+  END BANDITS-->
+  
+  <!--ORCS-->
+<!--  <Orc name="Orc" xPosition="308" yPosition="437"></Orc>
+  <Orc name="Orc" xPosition="140" yPosition="477"></Orc>
+  <Orc name="Orc" xPosition="224" yPosition="507"></Orc>
+  <Orc name="Orc" xPosition="308" yPosition="537"></Orc>
+  <Orc name="Orc" xPosition="280" yPosition="590"></Orc>
+  <Orc name="Orc" xPosition="140" yPosition="674"></Orc>
+  END ORCS-->
+  
+  <!--MIMIC-->
+  <Mimic name="Mimic" xPosition="214" yPosition="28"></Mimic>
+<!-- END MIMIC-->
+  
+<!--END ENEMIES-->
+  
+<!--DOOR-->
+  <BigDoor name="BigDoor" xPosition="224" yPosition="810"></BigDoor>
+  <!--END DOOR-->
 </Level>

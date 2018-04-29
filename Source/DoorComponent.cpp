@@ -32,10 +32,20 @@ Object * DoorComponent::update(float dt)
 {
 	Object* player = owner->getBlackboard()->getPlayer();
 	InventoryComponent* invComp = player->getComponent<InventoryComponent>();
-
-	if (invComp->getHasLoot(COUCH) && invComp->getHasLoot(BED) && invComp->getHasLoot(TABLE))
+	BodyComponent* playerBody = player->getComponent<BodyComponent>();
+	if (owner->getBlackboard()->getLevel() == 1)
 	{
-		this->setOpened(true);
+		if (invComp->getHasLoot(COUCH) && invComp->getHasLoot(BED) && invComp->getHasLoot(TABLE))
+		{
+			this->setOpened(true);
+		}
+	}
+	else
+	{
+		if (playerBody->getPositionPtr()->y <= 112)
+		{
+			this->setOpened(true);
+		}
 	}
 	return nullptr;
 }
