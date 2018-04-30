@@ -1,6 +1,7 @@
 #include "InputComponent.h"
 #include "InputDevice.h"
 #include "PhysicsDevice.h"
+#include "SoundDevice.h"
 #include "GameObjectFactory.h"
 #include "BodyComponent.h"
 #include "SpriteComponent.h"
@@ -20,6 +21,7 @@ bool InputComponent::initialize(GAME_OBJECTFACTORY_INITIALIZERS inits)
 	owner = inits.owner;
 	iDevice = inits.iDevice;
 	pDevice = inits.pDevice;
+	sDevice = inits.sDevice;
 	bodyComponent = owner->getComponent<BodyComponent>();
 	spriteComponent = owner->getComponent<SpriteComponent>();
 
@@ -110,7 +112,12 @@ Object* InputComponent::update(float dt)
 	{
 		appliedForce.y = (float)sinf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
 		appliedForce.x = (float)cosf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
-
+		
+		if (wallHit && pDevice->getLinearVelocity(owner).y<1 && pDevice->getLinearVelocity(owner).x<1)
+		{
+			wallHit = false;
+			sDevice->PlaySound("Bonk", 0, 1);
+		}
 
 		pDevice->setLinearVelocity(owner, appliedForce);
 	}

@@ -4,6 +4,7 @@ class AssetLibrary;
 class GraphicsDevice;
 class InputDevice;
 class PhysicsDevice;
+class SoundDevice;
 class View;
 class GameObjectFactory;
 class BodyComponent;
@@ -138,6 +139,7 @@ typedef struct GAME_OBJECTFACTORY_INITIALIZERS
 	TiXmlElement* root;
 	InputDevice* iDevice;
 	PhysicsDevice* pDevice;
+	SoundDevice* sDevice;
 	View* view;
 	GameObjectFactory* factory;
 	Blackboard* blackboard;

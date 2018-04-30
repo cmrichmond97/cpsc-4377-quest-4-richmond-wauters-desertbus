@@ -19,6 +19,7 @@ public:
 	void finish();
 private:
 
+	SoundDevice * sDevice;
 	BodyComponent * bodyComponent;
 	SpriteComponent* spriteComponent;
 	KEY_TYPE chestType;

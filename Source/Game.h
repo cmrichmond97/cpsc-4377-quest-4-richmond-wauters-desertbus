@@ -28,7 +28,7 @@ public:
 	Game();
 	~Game();
 
-	bool Initialize(std::string);
+	bool initialize(std::string);
 	void Reset();
 	bool LoadLevel(std::string);
 	bool Run();
@@ -44,6 +44,7 @@ private:
 	PhysicsDevice* pDevice;
 	GraphicsDevice* gDevice;
 	InputDevice* iDevice;
+	SoundDevice* sDevice;
 	Blackboard* blackboard;
 	std::vector<Object*> objects;
 	GameObjectFactory* objectFactory;

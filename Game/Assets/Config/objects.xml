@@ -431,6 +431,16 @@
       <component name="Sprite"></component>
       <component name="Loot"></component>
     </Components>
+
+    <Sounds>
+      <sound name="Bonk" path="" background="false"></sound>
+      <sound name="Chest" path="" background="false"></sound>
+    
+    </Sounds>
+  
+  
   </Loot>
+  
+  
 
 </Object>

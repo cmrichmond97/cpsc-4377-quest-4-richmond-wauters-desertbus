@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	//========================================
 	std::string objectConfigFile = "./Assets/Config/objects.xml";
 	Game* game = new Game;
-	if(!game->Initialize(objectConfigFile))
+	if(!game->initialize(objectConfigFile))
 	{
 		printf( "Game could not Initialize!");
 		exit(1);

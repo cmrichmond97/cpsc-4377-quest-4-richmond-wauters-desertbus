@@ -74,18 +74,18 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 	//walls always put the player as object B
 	switch (objectBType)
 	{
-		//	case PLAYER:
-		//		//if it is a wall, than set the input component's hit wall value to true.
-		//		if (objectAType == BLOCK)
-		//		{
-		////			objectB->getComponent<InputComponent>()->SetWallHit(true);
-		//		}
-		//		//otherwise, false.
-		//		else
-		//		{
-		////			objectB->getComponent<InputComponent>()->SetWallHit(false);
-		//		}
-		//		break;
+			case PLAYER:
+				//if it is a wall, than set the input component's hit wall value to true.
+				if (objectAType == BLOCK)
+				{
+					objectB->getComponent<InputComponent>()->setWallHit(true);
+				}
+				//otherwise, false.
+				else
+				{
+					objectB->getComponent<InputComponent>()->setWallHit(false);
+				}
+				break;
 
 	case ORC:
 		//if it is a wall, than set the input componet's hit wall value to true.

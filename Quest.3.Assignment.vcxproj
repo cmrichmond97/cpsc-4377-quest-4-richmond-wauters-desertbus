@@ -81,7 +81,9 @@
       <SubType>Designer</SubType>
     </Xml>
     <Xml Include="Assets\Config\level2.xml" />
-    <Xml Include="Assets\Config\objects.xml" />
+    <Xml Include="Assets\Config\objects.xml">
+      <SubType>Designer</SubType>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\bandit.png" />
@@ -135,8 +137,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)Game\</OutDir>
     <IntDir>$(ProjectDir)Temp\</IntDir>
-    <IncludePath>$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\include;$(ProjectDir)ThirdParty\SDL2-2.0.7\include;$(ProjectDir)ThirdParty\SDL2_image-2.0.2\include;$(IncludePath);$(ProjectDir)ThirdParty\Box2D\Box2D;$(ProjectDir)ThirdParty\Box2D</IncludePath>
-    <LibraryPath>$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\lib\x86;$(ProjectDir)ThirdParty\SDL2-2.0.7\lib\x86;$(ProjectDir)ThirdParty\SDL2_image-2.0.2\lib\x86;$(ProjectDir)ThirdParty\Box2D\Box2D\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\include;$(ProjectDir)ThirdParty\SDL2-2.0.7\include;$(ProjectDir)ThirdParty\SDL2_image-2.0.2\include;$(IncludePath);$(ProjectDir)ThirdParty\Box2D\Box2D;$(ProjectDir)ThirdParty\Box2D;$(ProjectDir)ThirdParty\SDL2_mixer-2.0.0\include</IncludePath>
+    <LibraryPath>$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\lib\x86;$(ProjectDir)ThirdParty\SDL2-2.0.7\lib\x86;$(ProjectDir)ThirdParty\SDL2_image-2.0.2\lib\x86;$(ProjectDir)ThirdParty\Box2D\Box2D\lib;$(ProjectDir)ThirdParty\SDL2_mixer-2.0.0\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -147,13 +149,14 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_gfx.lib;SDL2_ttf.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_gfx.lib;SDL2_ttf.lib;SDL2_mixer.lib;Box2D.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
     <PreBuildEvent>
       <Command>copy "$(ProjectDir)ThirdParty\SDL2-2.0.7\lib\x86\*.dll" "$(ProjectDir)"
 copy "$(ProjectDir)ThirdParty\SDL2_image-2.0.2\lib\x86\*.dll" "$(ProjectDir)"
-copy "$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\lib\x86\*.dll" "$(ProjectDir)"</Command>
+copy "$(ProjectDir)ThirdParty\SDL2_gfx-1.0.1\lib\x86\*.dll" "$(ProjectDir)"
+copy "$(ProjectDir)ThirdParty\SDL2_mixer-2.0.0\lib\x86\*.dll" "$(ProjectDir)"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>move "$(ProjectDir)*.dll" "$(ProjectDir)Game";

@@ -11,7 +11,7 @@
 #include "GameObjectFactory.h"
 #include "PhysicsDevice.h"
 #include "Blackboard.h"
-
+#include "SoundDevice.h"
 
 
 
@@ -35,7 +35,7 @@ Game::~Game()
 }
 
 
-bool Game::Initialize(std::string objectConfig)
+bool Game::initialize(std::string objectConfig)
 {
 	
 
@@ -95,6 +95,14 @@ bool Game::Initialize(std::string objectConfig)
 	}
 	inits.assetLibrary = assetLibrary;//add the asset library to the initializers
 
+	sDevice = new SoundDevice;//create the input device
+	if (!sDevice->initialize(assetLibrary))
+	{
+		printf("Sound Device could not initialize!");
+		exit(1);
+	}
+	inits.sDevice = sDevice;//add the input device to the initializers
+	sDevice->SetBackground("level1");
 
 	objectFactory = new GameObjectFactory;
 
@@ -279,6 +287,7 @@ bool Game::Update()
 
 			}
 			LoadLevel("./Assets/Config/level2.xml");
+			sDevice->SetBackground("level2");
 			blackboard->setLevel(2);
 			blackboard->setGameClear(false);
 		}

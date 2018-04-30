@@ -130,7 +130,7 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 			paths[objectTypeEnum] = newTexture;
 		}//Initialize Texture
 		
-		initElement = element->FirstChildElement("Sprites");
+		initElement = element->FirstChildElement("Sprites");//LOOT object only
 		if (initElement)
 		{// Initialize Loot Textures
 			initElement = initElement->FirstChildElement("Sprite");
@@ -152,6 +152,32 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				initElement = initElement->NextSiblingElement("Sprite");
 			}
 		}//Initialize Loot Textures
+
+		initElement = element->FirstChildElement("Sounds");//LOOT object only
+		if (initElement)
+		{
+			//TODO: add the sound effects and background noises to objects.xml in the LOOT object
+			initElement = initElement->FirstChildElement("Sound");
+			while (initElement)
+			{
+				//get information from file
+				std::string name = initElement->Attribute("name");
+				std::string path = initElement->Attribute("path");
+				bool background;
+				initElement->QueryBoolAttribute("background", &background);
+
+				//add to library based on whether it is background music or not.
+				if (background)
+				{
+					backgroundMusic[name] = Mix_LoadMUS(path.c_str());
+				}
+				else
+				{
+					soundEffects[name] = Mix_LoadWAV(path.c_str());
+				}
+				initElement = initElement->NextSiblingElement();
+			}
+		}
 
 		initElement = element->FirstChildElement("Physics");
 		if(initElement)
@@ -323,3 +349,5 @@ GAME_PHYSICS AssetLibrary::getObjectPhysics(OBJECT_TYPE type)
 {
 	return (objectPhysics[type]);
 }
+
+

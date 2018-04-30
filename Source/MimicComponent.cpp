@@ -34,7 +34,7 @@ Object * MimicComponent::update(float dt)
 	}
 	
 	if (awake)
-	{
+	{ //TODO: Mimic is not pathing properly. need to mess around with it some more.
 		GAME_INT forceMultiplier =5;
 		//find angle between player and mimic
 
