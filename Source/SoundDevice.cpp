@@ -10,6 +10,7 @@ SoundDevice::~SoundDevice()
 bool SoundDevice::initialize(AssetLibrary* newLibrary)
 //**************************************
 {
+	library = newLibrary;
 	//allows for OGG support
 	int flags = MIX_INIT_OGG;
 	int initted = Mix_Init(flags);
@@ -48,6 +49,7 @@ bool SoundDevice::PlaySound(std::string sound, int numLoops)
 bool SoundDevice::PlaySound(std::string sound, int numLoops, int channel)
 //**************************************
 {
+
 	Mix_PlayChannel(channel, library->getSound(sound), numLoops);
 	return true;
 }

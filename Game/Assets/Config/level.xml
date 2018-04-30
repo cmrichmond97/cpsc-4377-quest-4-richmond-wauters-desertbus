@@ -38,7 +38,7 @@
   <Block name="Block" xStart="392" yStart="168" xEnd="392" yEnd="280"></Block>
   <Block name="Block" xStart="336" yStart="140" xEnd="336" yEnd="140"></Block>
  
-  <Player name="Player" xPosition="400" yPosition="300" ></Player>
+  <Player name="Player" xPosition="400" yPosition="310" ></Player>
 
 
 

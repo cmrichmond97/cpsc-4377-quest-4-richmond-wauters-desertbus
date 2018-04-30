@@ -432,10 +432,12 @@
       <component name="Loot"></component>
     </Components>
 
-    <Sounds>
-      <sound name="Bonk" path="" background="false"></sound>
-      <sound name="Chest" path="" background="false"></sound>
-    
+    <Sounds><!--Sounds are here because i am lazy-->
+      
+      <sound name="Bonk" path="./Assets/Sounds/Collision.ogg" background="false"></sound>
+      <sound name="Chest" path="./Assets/Sounds/ChestOpen.ogg" background="false"></sound>
+      <sound name="level1" path="./Assets/Sounds/BackgroundMusic.ogg" background="true"></sound>
+
     </Sounds>
   
   

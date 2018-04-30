@@ -434,9 +434,9 @@
 
     <Sounds><!--Sounds are here because i am lazy-->
       
-      <sound name="Bonk" path="./Assets/Sounds/Collision.wav" background="false"></sound>
-      <sound name="Chest" path="./Assets/Sounds/ChestOpen.wav" background="false"></sound>
-      <sound name="level1" path="./Assets/Sounds/BackgroundMusic.wav" background="false"></sound>
+      <sound name="Bonk" path="./Assets/Sounds/Collision.ogg" background="false"></sound>
+      <sound name="Chest" path="./Assets/Sounds/ChestOpen.ogg" background="false"></sound>
+      <sound name="level1" path="./Assets/Sounds/BackgroundMusic.ogg" background="true"></sound>
 
     </Sounds>
   

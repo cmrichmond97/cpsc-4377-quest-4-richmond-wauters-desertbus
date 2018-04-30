@@ -40,7 +40,7 @@ bool Game::initialize(std::string objectConfig)
 	
 
 	blackboard = new Blackboard;//create the blackboard
-	blackboard->setLevel(2);
+	blackboard->setLevel(1);
 	inits.blackboard = blackboard;//add the blackboard to the initializers
 
 	gDevice = new GraphicsDevice(SCREEN_WIDTH, SCREEN_HEIGHT);//create the graphics device
@@ -90,7 +90,7 @@ bool Game::initialize(std::string objectConfig)
 	assetLibrary = new AssetLibrary;// create the asset library
 	if (!assetLibrary->initialize(gDevice, objectConfig))
 	{
-		printf("Art Library could not initialize!");
+		printf("Asset Library could not initialize!");
 		exit(1);
 	}
 	inits.assetLibrary = assetLibrary;//add the asset library to the initializers

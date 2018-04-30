@@ -157,7 +157,7 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 		if (initElement)
 		{
 			//TODO: add the sound effects and background noises to objects.xml in the LOOT object
-			initElement = initElement->FirstChildElement("Sound");
+			initElement = initElement->FirstChildElement("sound");
 			while (initElement)
 			{
 				//get information from file
@@ -174,6 +174,7 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				else
 				{
 					soundEffects[name] = Mix_LoadWAV(path.c_str());
+					printf("sound path: %s/n", path.c_str());
 				}
 				initElement = initElement->NextSiblingElement();
 			}
@@ -348,6 +349,16 @@ std::vector<Component*> AssetLibrary::getComponentList(OBJECT_TYPE type)
 GAME_PHYSICS AssetLibrary::getObjectPhysics(OBJECT_TYPE type)
 {
 	return (objectPhysics[type]);
+}
+
+Mix_Chunk * AssetLibrary::getSound(std::string sound)
+{
+	return (soundEffects[sound]);
+}
+
+Mix_Music * AssetLibrary::getMusic(std::string music)
+{
+	return (backgroundMusic[music]);
 }
 
 

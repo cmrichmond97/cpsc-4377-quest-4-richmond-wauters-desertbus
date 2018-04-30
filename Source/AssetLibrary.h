@@ -21,8 +21,8 @@ public:
 	std::map<ANIM_STATE, std::vector<SPRITE_CLIP*>*>* getAnimMap(OBJECT_TYPE);
 	std::vector<Component*> getComponentList(OBJECT_TYPE);
 	GAME_PHYSICS getObjectPhysics(OBJECT_TYPE);
-	Mix_Chunk* getSound(std::string sound) { return (soundEffects[sound]); }
-	Mix_Music* getMusic(std::string music) { return (backgroundMusic[music]); }
+	Mix_Chunk* getSound(std::string sound);
+	Mix_Music* getMusic(std::string music);
 	bool initialize(GraphicsDevice*, std::string);
 private:
 	std::map<OBJECT_TYPE, Texture*> paths;

@@ -116,7 +116,7 @@ Object* InputComponent::update(float dt)
 		if (wallHit && pDevice->getLinearVelocity(owner).y<1 && pDevice->getLinearVelocity(owner).x<1)
 		{
 			wallHit = false;
-			sDevice->PlaySound("Bonk", 0, 1);
+			sDevice->PlaySound("Bonk", 0, 2);
 		}
 
 		pDevice->setLinearVelocity(owner, appliedForce);
