@@ -287,7 +287,7 @@ bool Game::Update()
 
 			}
 			LoadLevel("./Assets/Config/level2.xml");
-			sDevice->SetBackground("level2");
+			//sDevice->SetBackground("level2");
 			blackboard->setLevel(2);
 			blackboard->setGameClear(false);
 		}

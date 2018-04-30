@@ -104,6 +104,11 @@
     <Image Include="Assets\spritesheet.png" />
     <Image Include="Assets\Table.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Sounds\BackgroundMusic.wav" />
+    <Media Include="Assets\Sounds\ChestOpen.wav" />
+    <Media Include="Assets\Sounds\Collision.wav" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DED01E1F-E86B-45A6-99DF-0B794EB7F4EC}</ProjectGuid>
     <RootNamespace>Hmwk1Solution</RootNamespace>

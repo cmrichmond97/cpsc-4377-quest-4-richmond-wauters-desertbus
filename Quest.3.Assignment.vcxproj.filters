@@ -241,6 +241,9 @@
     <Filter Include="Source Files\Components\Behavior Components">
       <UniqueIdentifier>{29d83742-757d-4e4a-847e-004d9063cb02}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Sounds">
+      <UniqueIdentifier>{ff13779e-8a2b-4fea-a411-9cb0e0795131}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\bandit.png">
@@ -294,5 +297,16 @@
     <Image Include="Assets\Table.png">
       <Filter>Resource Files\Spritesheets</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Sounds\BackgroundMusic.wav">
+      <Filter>Resource Files\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\ChestOpen.wav">
+      <Filter>Resource Files\Sounds</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\Collision.wav">
+      <Filter>Resource Files\Sounds</Filter>
+    </Media>
   </ItemGroup>
 </Project>
