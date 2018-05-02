@@ -42,7 +42,7 @@ void ChestComponent::setOpened(bool open)
 	if (open)
 	{
 		owner->getComponent<BodyComponent>()->setState(OPEN);
-		sDevice->PlaySound("Chest", 0, 2);
+		sDevice->PlaySound("Chest", 0, -1);
 	}
 	else
 	{

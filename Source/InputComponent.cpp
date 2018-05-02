@@ -44,6 +44,7 @@ Object* InputComponent::update(float dt)
 	GAME_VEC velocity = pDevice->getLinearVelocity(owner);
 	GAME_INT forceMultiplier = 10;
 	GAME_VEC appliedForce;
+	if (wallWait > 0) { wallWait--; }
 
 	if (iDevice->getEvent(GAME_UP))//UP
 	{
@@ -113,7 +114,7 @@ Object* InputComponent::update(float dt)
 		appliedForce.y = (float)sinf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
 		appliedForce.x = (float)cosf((pDevice->getAngle(owner)*PI / 180) - (PI / 2))*forceMultiplier;
 		
-		if (wallHit && pDevice->getLinearVelocity(owner).y<1 && pDevice->getLinearVelocity(owner).x<1)
+		if (wallHit /*&& pDevice->getLinearVelocity(owner).y<1 && pDevice->getLinearVelocity(owner).x<1*/)
 		{
 			wallHit = false;
 			sDevice->PlaySound("Bonk", 0, 2);
