@@ -9,13 +9,14 @@ class AssetLibrary;
 class SoundDevice {
 public:
 	~SoundDevice();
-	bool initialize(AssetLibrary* newLibrary);
+	bool initialize();
 	void Shutdown();
 
 	bool PlaySound(std::string sound, int numLoops);
 	bool PlaySound(std::string sound, int numLoops, int channel);
 
 	void SetBackground(std::string background);
+	void setLibrary(AssetLibrary*newLibrary) { library = newLibrary; }
 
 private:
 

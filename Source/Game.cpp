@@ -86,6 +86,13 @@ bool Game::initialize(std::string objectConfig)
 	}
 	inits.view = view;//add the view to the initializers
 
+	sDevice = new SoundDevice;//create the input device
+	if (!sDevice->initialize())
+	{
+		printf("Sound Device could not initialize!");
+		exit(1);
+	}
+	inits.sDevice = sDevice;//add the sound device to the initializers
 
 	assetLibrary = new AssetLibrary;// create the asset library
 	if (!assetLibrary->initialize(gDevice, objectConfig))
@@ -94,14 +101,8 @@ bool Game::initialize(std::string objectConfig)
 		exit(1);
 	}
 	inits.assetLibrary = assetLibrary;//add the asset library to the initializers
+	sDevice->setLibrary(assetLibrary);
 
-	sDevice = new SoundDevice;//create the input device
-	if (!sDevice->initialize(assetLibrary))
-	{
-		printf("Sound Device could not initialize!");
-		exit(1);
-	}
-	inits.sDevice = sDevice;//add the input device to the initializers
 	sDevice->SetBackground("level1");
 
 	objectFactory = new GameObjectFactory;

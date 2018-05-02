@@ -7,10 +7,9 @@ SoundDevice::~SoundDevice()
 }
 //**************************************
 //set's up initial setting for sound device
-bool SoundDevice::initialize(AssetLibrary* newLibrary)
+bool SoundDevice::initialize()
 //**************************************
 {
-	library = newLibrary;
 	//allows for OGG support
 	int flags = MIX_INIT_OGG;
 	int initted = Mix_Init(flags);
