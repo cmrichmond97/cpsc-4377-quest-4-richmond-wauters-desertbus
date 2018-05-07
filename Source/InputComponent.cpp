@@ -42,7 +42,7 @@ Object* InputComponent::update(float dt)
 	Object* newObject = nullptr;
 
 	GAME_VEC velocity = pDevice->getLinearVelocity(owner);
-	GAME_INT forceMultiplier = 10;
+	GAME_INT forceMultiplier = 7;
 	GAME_VEC appliedForce;
 	if (wallWait > 0) { wallWait--; }
 

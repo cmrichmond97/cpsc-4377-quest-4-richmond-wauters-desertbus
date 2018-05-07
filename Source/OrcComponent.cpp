@@ -39,7 +39,7 @@ Object* OrcComponent::update( float dt)
 	}
 
 	GAME_VEC velocity = pDevice->getLinearVelocity(owner);
-	GAME_INT forceMultiplier = 5;
+	GAME_INT forceMultiplier = 3;
 	GAME_VEC appliedForce;
 
 	switch (bodyComponent->getState()) //Before we change the position (i.e. before the orc moves), check if he's hit a wall

@@ -103,7 +103,7 @@ bool Game::initialize(std::string objectConfig)
 	inits.assetLibrary = assetLibrary;//add the asset library to the initializers
 	sDevice->setLibrary(assetLibrary);
 
-//	sDevice->SetBackground("level1");
+	//sDevice->SetBackground("level1");
 
 	objectFactory = new GameObjectFactory;
 
@@ -314,6 +314,6 @@ bool Game::Draw()
 		objects[i]->draw();
 	}
 	//Draw the Debug overlay
-	pDevice->world->DrawDebugData();
+	//pDevice->world->DrawDebugData();
 	return(true);
 }

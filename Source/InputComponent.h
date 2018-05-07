@@ -11,7 +11,7 @@ public:
 	bool initialize(GAME_OBJECTFACTORY_INITIALIZERS inits);
 	Object* update(float dt);
 	void finish();
-	void setWallHit(bool wasHit) { if (wallWait == 0) { wallHit = wasHit; wallWait = 5; } }
+	void setWallHit(bool wasHit) { if (wallWait == 0) { wallHit = wasHit; wallWait = 8; } }
 
 private:
 	InputDevice* iDevice;

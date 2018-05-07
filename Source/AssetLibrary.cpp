@@ -174,7 +174,7 @@ bool AssetLibrary::initialize(GraphicsDevice* gDevice, std::string objectConfig)
 				else
 				{
 					soundEffects[name] = Mix_LoadWAV(path.c_str());
-					printf("sound path: %s/n", path.c_str());
+					printf("sound path: %s\n", path.c_str());
 				}
 				initElement = initElement->NextSiblingElement();
 			}
