@@ -40,7 +40,7 @@ bool Game::initialize(std::string objectConfig)
 	
 
 	blackboard = new Blackboard;//create the blackboard
-	blackboard->setLevel(1);
+	blackboard->setLevel(2);
 	inits.blackboard = blackboard;//add the blackboard to the initializers
 
 	gDevice = new GraphicsDevice(SCREEN_WIDTH, SCREEN_HEIGHT);//create the graphics device
@@ -103,7 +103,7 @@ bool Game::initialize(std::string objectConfig)
 	inits.assetLibrary = assetLibrary;//add the asset library to the initializers
 	sDevice->setLibrary(assetLibrary);
 
-	sDevice->SetBackground("level1");
+	//sDevice->SetBackground("level1");
 
 	objectFactory = new GameObjectFactory;
 

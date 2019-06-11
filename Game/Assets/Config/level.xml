@@ -43,7 +43,7 @@
 
 
 
-<!---->
+<!--
  <Orc name="Orc" xPosition="140" yPosition="58" ></Orc>
   <Orc name="Orc" xPosition="196" yPosition="58"></Orc>
   <Orc name="Orc" xPosition="420" yPosition="56"></Orc>
@@ -55,7 +55,7 @@
   <Bandit name="Bandit" xPosition="532" yPosition="160" speed ="10"></Bandit>
   <Bandit name="Bandit" xPosition="336" yPosition="280" speed ="10"></Bandit>
  
-
+-->
   <BigDoor name="BigDoor" xPosition="280" yPosition="0"></BigDoor>
 
 

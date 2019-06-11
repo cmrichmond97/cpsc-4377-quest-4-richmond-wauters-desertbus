@@ -55,18 +55,18 @@
   
 <!--ENEMIES-->
 
-  <!--BANDITS-->
-<!--  <Bandit name="Bandit" xPosition="295" yPosition="217" speed ="13"></Bandit>
-  END BANDITS-->
+  <!--BANDITS--><!-- 
+  <Bandit name="Bandit" xPosition="295" yPosition="217" speed ="13"></Bandit>
+ END BANDITS-->
   
   <!--ORCS-->
-<!--  <Orc name="Orc" xPosition="308" yPosition="437"></Orc>
+   <Orc name="Orc" xPosition="308" yPosition="437"></Orc>
   <Orc name="Orc" xPosition="140" yPosition="477"></Orc>
   <Orc name="Orc" xPosition="224" yPosition="507"></Orc>
   <Orc name="Orc" xPosition="308" yPosition="537"></Orc>
   <Orc name="Orc" xPosition="280" yPosition="590"></Orc>
   <Orc name="Orc" xPosition="140" yPosition="674"></Orc>
-  END ORCS-->
+<!-- END ORCS-->
   
   <!--MIMIC-->
   <Mimic name="Mimic" xPosition="214" yPosition="28"></Mimic>
